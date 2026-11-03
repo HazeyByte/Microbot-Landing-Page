@@ -1,5 +1,13 @@
 const releases = [
     {
+        date: new Date('11/03/2026'), //MM/dd/YYYY
+        version: '2.6.51',
+        icon: 'images/releases/2.6.51/skull.png',
+        title: '2.6.51 Release - The 2.6.50 crash is fixed, and ban reports are here',
+        content: "A fix for the 2.6.50 error on the Equipment Stats screen, anonymous ban reports you can turn off, a tour step that shows how to report a problem, walker fixes for quetzals, instances, rivers and the Biohazard gate, and Hub updates including the new Auto Gauntlet plugin, Tempoross, Tithe Farm, Blast Furnace, Slayer and Auto Woodcutting.",
+        author: 'Microbot Team'
+    },
+    {
         date: new Date('10/31/2026'), //MM/dd/YYYY
         version: '2.6.49',
         icon: 'images/releases/icons/login.png',
