@@ -43,5 +43,5 @@ This project uses Speckit for structured feature development. Available skills:
 
 - Conventional commits: `feat:`, `docs:`, `fix:`, `chore:`
 - Update `/docs/QUERYABLE_API.md` for API changes
-- Add release notes to `/releases/` directory: copy the newest page there and replace its head metadata and `<main>`. Pages on the old template do not work (see `docs/SITE_PAGES.md`)
+- Add release notes to `/releases/` directory: copy the newest page there and replace its head metadata and `<main>`. Pages on the old template still render but keep the old header (see `docs/SITE_PAGES.md`)
 - Main branch: `master`

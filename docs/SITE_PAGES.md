@@ -47,8 +47,9 @@ with `renderer.js`.
 ## Adding release notes
 
 Copy the newest page in `releases/` and replace its head metadata and `<main>`, then add the entry to
-`microbot/releases/release.js` and link the previous page's pager to it. A page on the old template loads stylesheets
-that no longer exist and none of the theme tokens, so it renders unstyled.
+`microbot/releases/release.js` and link the previous page's pager to it. A page on the old template still renders, because
+`releases.css` imports the tokens and the old stylesheets are kept, but it has the old header and footer. Remove both once
+release notes use the shared template.
 
 ## Adding a page
 
