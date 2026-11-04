@@ -28,7 +28,7 @@ in a webview about 500-880px wide and, on themicrobot.com pages, runs:
 | `body > main > section.c-main-header.c-main-header--home.py-5.d-flex.flex-column.justify-content-center` (home only) | sets min-height 600px |
 
 So every page keeps: `<html class="mb">`, `<header class="c-header">` as a direct child of `<body>` with, in order,
-`div.c-events-block.py-2 > div`, `div.c-border-red.mb-2`, `nav > div`; `#cookie-banner` on themicrobot.com pages; and
+`div.c-events-block.py-2 > div`, `div.c-border-red.mb-2`, `nav > div`; `#cookie-banner` on any page that loads Analytics (home, plugins); and
 the home hero section with exactly those classes as a direct child of `<main>`. The utility classes (`py-5`, `d-flex`, ...)
 style nothing any more; they stay only so the selectors still match.
 

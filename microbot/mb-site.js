@@ -67,14 +67,17 @@ window.MB = (function () {
     function releasesBadge() {
         var badge = document.getElementById('releases-badge');
         if (!badge) return;
-        var s = document.createElement('script');
-        s.src = (document.querySelector('link[href$="mb-theme.css"]').href).replace('mb-theme.css', 'releases/release.js');
-        s.onload = function () {
+        function ready() {
             if (typeof releases === 'undefined') return;
             var week = 7 * 24 * 3600 * 1000;
             badge.hidden = !releases.some(function (r) { return Date.now() - new Date(r.date).getTime() <= week; });
             document.dispatchEvent(new Event('mb:releases'));
-        };
+        }
+        // releases.html already loads release.js; its top-level const can't be declared twice.
+        if (typeof releases !== 'undefined') return ready();
+        var s = document.createElement('script');
+        s.src = (document.querySelector('link[href$="mb-theme.css"]').href).replace('mb-theme.css', 'releases/release.js');
+        s.onload = ready;
         document.head.appendChild(s);
     }
 
