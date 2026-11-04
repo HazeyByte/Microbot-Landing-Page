@@ -81,11 +81,11 @@
 }
 @media (max-width: 900px) {
   .mb .mb-hero { gap: 28px; }
-  .mb .mb-top { grid-template-columns: 1fr; }
+  .mb .mb-top { grid-template-columns: minmax(0, 1fr); }
   .mb .mb-discord { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
-  .mb .mb-hero { grid-template-columns: 1fr; }
+  .mb .mb-hero { grid-template-columns: minmax(0, 1fr); }
   .mb .mb-latest { grid-template-columns: 1fr; gap: 12px; padding: 24px; }
   .mb .mb-latest__version { flex-direction: row; align-items: center; font-size: 42px; }
   .mb .mb-latest__version img { width: 46px; }

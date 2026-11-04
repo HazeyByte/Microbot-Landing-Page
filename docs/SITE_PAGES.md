@@ -8,7 +8,8 @@ the Microbot Launcher's theme. New pages start from `docs/page-template.html` an
 | File | What | Used by |
 |---|---|---|
 | `microbot/mb-theme.css` | Tokens (launcher colours, fonts), base, header, footer, buttons, cards, chips, cookie banner, launcher mode | every page, Hub pages load it from themicrobot.com |
-| `microbot/mb-site.js` | Menu toggle, cookie consent + Analytics, Releases NEW badge, launcher mode, `MB.el`, `MB.countUp` | every page |
+| `microbot/mb-site.js` | Menu toggle, cookie consent + Analytics, Releases NEW badge, launcher mode, `MB.*` helpers | every page |
+| `microbot/fonts/` | Self-hosted Montserrat and Cinzel, so no page calls Google before consent. Do not add font links to pages | `mb-theme.css` |
 | `microbot/mb-home.css`, `mb-plugins.css` | Page-only styles | index.html, plugins.html |
 | Hub: `_layouts/default.html`, `_includes/header.html`, `_includes/footer.html`, `assets/css/hub.css` | Plugin pages | Microbot-Hub `public/docs/` |
 
@@ -32,15 +33,22 @@ So every page keeps: `<html class="mb">`, `<header class="c-header">` as a direc
 the home hero section with exactly those classes as a direct child of `<main>`. The utility classes (`py-5`, `d-flex`, ...)
 style nothing any more; they stay only so the selectors still match.
 
-`?source=launcher` adds `html.mb-in-launcher` (before first paint on the home page): the header stops being sticky, the
+`?source=launcher` adds `html.mb-in-launcher` (before first paint on the home page) and `sessionStorage` keeps it for the
+rest of the visit, because links inside the launcher lose the parameter: the header stops being sticky, the
 strip hides, the home download buttons are replaced by Browse plugins / What's new, and the cookie banner never shows.
 
 ## Check before publishing
 
 Serve the repo root (`python -m http.server 8000`) and open `docs/launcher-check.html`:
 `?page=<file>` for any page, `?w=500` for the narrowest launcher window. The tab title says PASS or FAIL; the bar lists
-each selector found, sideways scroll, launcher mode and (home) the download buttons. Keep its selector list in step
+each selector found, sideways scroll, launcher mode (and that it survives a link), the open menu and (home) the download buttons. Keep its selector list in step
 with `renderer.js`.
+
+## Adding release notes
+
+Copy the newest page in `releases/` and replace its head metadata and `<main>`, then add the entry to
+`microbot/releases/release.js` and link the previous page's pager to it. A page on the old template loads stylesheets
+that no longer exist and none of the theme tokens, so it renders unstyled.
 
 ## Adding a page
 

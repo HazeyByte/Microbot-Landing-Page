@@ -6,14 +6,19 @@
     <title>Microbot Plugins - Community plugins for Old School RuneScape</title>
     <meta name="description" content="Browse community plugins for the Microbot client: skilling, combat, minigames and more. Free and open source.">
     <link rel="canonical" href="https://microbot.cloud/plugins.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Microbot">
+    <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Microbot Plugins">
+    <meta property="og:description" content="Browse community plugins for the Microbot client: skilling, combat, minigames and more. Free and open source.">
     <meta property="og:image" content="https://www.themicrobot.com/images/general/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Microbot Plugins">
+    <meta name="twitter:description" content="Browse community plugins for the Microbot client: skilling, combat, minigames and more. Free and open source.">
+    <meta name="twitter:image" content="https://www.themicrobot.com/images/general/logo.png">
     <meta name="theme-color" content="#0c0a08">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="./microbot/mb-theme.css">
     <link rel="stylesheet" href="./microbot/mb-plugins.css">
 </head>
@@ -159,6 +164,8 @@
         const li = MB.el('li');
         const a = MB.el('a', 'mb-card mb-plugin');
         a.href = HUB + encodeURIComponent(p.internalName);
+        a.target = '_blank'; // the launcher opens these in the system browser
+        a.rel = 'noopener noreferrer';
         const art = MB.el('span', 'mb-plugin__art');
         const img = MB.el('img');
         img.alt = ''; img.loading = 'lazy';
@@ -198,14 +205,8 @@
         try {
             const r = await fetch(HUB + 'plugins.json');
             if (!r.ok) throw new Error('HTTP ' + r.status);
-            all = (await r.json()).filter(p => !p.disable);
-            try {
-                const ir = await fetch('https://microbot.cloud/api/PluginTelemetry/plugins-total-installs', {
-                    method: 'POST', headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({PluginNames: all.map(p => p.internalName)})
-                });
-                if (ir.ok) for (const d of await ir.json()) installs[d.pluginName] = d.totalInstalls;
-            } catch (e) { /* install counts are a nice-to-have */ }
+            all = MB.cleanPlugins(await r.json());
+            installs = await MB.pluginInstalls(all.map(p => p.internalName));
             all.sort((a, b) => (installs[b.internalName] || 0) - (installs[a.internalName] || 0) || a.name.localeCompare(b.name));
             chips();
             const s = $('pluginSearch');

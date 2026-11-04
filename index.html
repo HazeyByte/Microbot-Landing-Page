@@ -10,14 +10,13 @@
     <meta property="og:image" content="https://www.themicrobot.com/images/general/logo.png">
     <meta name="theme-color" content="#0c0a08">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="./microbot/mb-theme.css">
     <link rel="stylesheet" href="./microbot/mb-home.css">
     <script>
-        // Before first paint, so the launcher never flashes the download buttons.
-        if (/[?&]source=[^&]*launcher/i.test(location.search)) document.documentElement.classList.add('mb-in-launcher');
+        // Before first paint, so the launcher never flashes the download buttons. mb-site.js sets mb-launcher.
+        try {
+            if (/[?&]source=[^&]*launcher/i.test(location.search) || sessionStorage.getItem('mb-launcher')) document.documentElement.classList.add('mb-in-launcher');
+        } catch (e) {}
     </script>
 </head>
 <body>
@@ -203,17 +202,16 @@
         if (!releases.length) return;
         const latest = releases.slice().sort((a, b) => new Date(b.date) - new Date(a.date))[0];
         const date = new Date(latest.date);
-        const titled = latest.title.includes(' - ');
-        const isNew = (Date.now() - date.getTime()) < 7 * 24 * 60 * 60 * 1000;
+        const text = MB.releaseText(latest);
 
         document.getElementById('latest-release').href = 'releases/' + encodeURIComponent(latest.version) + '.html';
         document.getElementById('latest-release-version').textContent = latest.version;
         document.getElementById('latest-release-date').textContent = date.toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric'});
-        document.getElementById('latest-release-label').textContent = isNew ? 'New release' : 'Latest release';
-        document.getElementById('latest-release-title').textContent = titled ? latest.title.split(' - ').slice(1).join(' - ') : latest.content;
+        document.getElementById('latest-release-label').textContent = MB.isNewRelease(date) ? 'New release' : 'Latest release';
+        document.getElementById('latest-release-title').textContent = text.headline;
         const summary = document.getElementById('latest-release-summary');
-        summary.textContent = titled ? latest.content : '';
-        summary.hidden = !titled;
+        summary.textContent = text.summary;
+        summary.hidden = !text.summary;
         if (latest.icon) {
             const icon = document.getElementById('latest-release-icon');
             icon.src = latest.icon;
@@ -255,15 +253,9 @@
             try {
                 const pr = await fetch('https://chsami.github.io/Microbot-Hub/plugins.json');
                 if (!pr.ok) return;
-                const plugins = (await pr.json()).filter(p => !p.disable);
+                const plugins = MB.cleanPlugins(await pr.json());
                 document.getElementById('plugin-count').textContent = `${plugins.length} community plugins`;
-                const ir = await fetch('https://microbot.cloud/api/PluginTelemetry/plugins-total-installs', {
-                    method: 'POST', headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({PluginNames: plugins.map(p => p.internalName)})
-                });
-                if (!ir.ok) return;
-                const installs = {};
-                for (const d of await ir.json()) installs[d.pluginName] = d.totalInstalls;
+                const installs = await MB.pluginInstalls(plugins.map(p => p.internalName));
                 const top = plugins.filter(p => installs[p.internalName] > 0)
                     .sort((a, b) => installs[b.internalName] - installs[a.internalName]).slice(0, 6);
                 if (!top.length) return;
@@ -272,6 +264,8 @@
                     const li = document.createElement('li');
                     const a = MB.el('a', 'mb-card mb-top__item');
                     a.href = `https://chsami.github.io/Microbot-Hub/${encodeURIComponent(p.internalName)}`;
+                    a.target = '_blank'; // the launcher opens these in the system browser
+                    a.rel = 'noopener noreferrer';
                     a.append(MB.el('span', 'mb-top__rank', String(i + 1)));
                     const body = MB.el('span', 'mb-top__body');
                     body.append(MB.el('span', 'mb-top__name', p.name.trim()),
