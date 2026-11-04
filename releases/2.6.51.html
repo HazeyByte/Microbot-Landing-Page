@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="mb">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Microbot 2.6.51 release notes</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Microbot 2.6.51: the 2.6.50 Equipment Stats error is fixed, anonymous ban reports you can turn off, a tour step for reporting problems, walker fixes for quetzals, instances, rivers and the Biohazard gate, and Hub updates including the new Auto Gauntlet plugin, Tempoross, Tithe Farm and Blast Furnace.">
+    <link rel="canonical" href="https://microbot.cloud/releases/2.6.51.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Microbot">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Microbot 2.6.51 release notes">
+    <meta property="og:description" content="Microbot 2.6.51: the 2.6.50 Equipment Stats error is fixed, anonymous ban reports you can turn off, a tour step for reporting problems, walker fixes for quetzals, instances, rivers and the Biohazard gate, and Hub updates including the new Auto Gauntlet plugin, Tempoross, Tithe Farm and Blast Furnace.">
+    <meta property="og:image" content="https://microbot.cloud/images/general/logo.png">
+    <meta property="og:url" content="https://microbot.cloud/releases/2.6.51.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Microbot 2.6.51 release notes">
+    <meta name="twitter:description" content="Microbot 2.6.51: the 2.6.50 Equipment Stats error is fixed, anonymous ban reports you can turn off, a tour step for reporting problems, walker fixes for quetzals, instances, rivers and the Biohazard gate, and Hub updates including the new Auto Gauntlet plugin, Tempoross, Tithe Farm and Blast Furnace.">
+    <link rel="stylesheet" href="../microbot/mb-theme.css">
+    <link rel="stylesheet" href="../microbot/releases/releases.css">
+    <meta name="theme-color" content="#0c0a08">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;500;600;700;800&display=swap">
+</head>
+<body class="rn-page">
+<header class="c-header">
+    <div class="c-events-block py-2">
+        <div class="container">
+            <span class="mb-event" id="mb-event"></span>
+            <a href="https://discord.gg/zaGrfqFEWE" target="_blank" rel="noreferrer noopener">
+                <svg viewBox="0 0 71 55" aria-hidden="true"><path fill="currentColor" d="M60.1 4.9A58.5 58.5 0 0 0 45.6.4l-.2.1a40.8 40.8 0 0 0-1.8 3.7 54 54 0 0 0-16.2 0A37.3 37.3 0 0 0 25.6.5L25.4.4A58.4 58.4 0 0 0 10.9 4.9l-.1.1C1.6 18.7-1 32.1.3 45.4l.1.2a58.7 58.7 0 0 0 17.7 9h.3a42 42 0 0 0 3.6-5.9l-.1-.3a38.8 38.8 0 0 1-5.5-2.6l-.1-.4 1.1-.9.2-.1a41.9 41.9 0 0 0 35.7 0h.2l1.1.9v.4a36.4 36.4 0 0 1-5.5 2.6l-.1.3a47.2 47.2 0 0 0 3.6 5.9h.3a58.5 58.5 0 0 0 17.7-9l.1-.2C72.6 30 68.6 16.7 60.1 5zM23.7 37.3c-3.5 0-6.4-3.2-6.4-7.1 0-4 2.8-7.2 6.4-7.2 3.6 0 6.4 3.2 6.4 7.2 0 3.9-2.8 7.1-6.4 7.1zm23.6 0c-3.5 0-6.4-3.2-6.4-7.1 0-4 2.8-7.2 6.4-7.2 3.6 0 6.4 3.2 6.4 7.2 0 3.9-2.8 7.1-6.4 7.1z"/></svg>
+                Join us on Discord
+            </a>
+        </div>
+    </div>
+    <div class="c-border-red mb-2"></div>
+    <nav class="c-nav" aria-label="Site">
+        <div class="container">
+            <a class="mb-brand" href="../index.html" aria-label="Microbot home">
+                <img src="../microbot/logo.png" alt="" width="44" height="44">
+                <span class="mb-brand__text"><span class="mb-brand__name">Microbot</span><span class="mb-brand__tag">Old School client</span></span>
+            </a>
+            <button class="mb-menu" type="button" aria-expanded="false" aria-controls="mb-nav">Menu</button>
+            <ul class="mb-nav" id="mb-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../plugins.html">Plugins</a></li>
+                <li><a href="../releases.html" aria-current="page">Releases<span id="releases-badge" class="new-badge" hidden>NEW</span></a></li>
+                <li><a href="https://www.github.com/chsami/microbot" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://discord.gg/zaGrfqFEWE" target="_blank" rel="noopener">Discord</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="rn-hero">
+        <div class="container">
+            <div>
+            <div class="rn-eyebrow">Release notes</div>
+            <h1>Microbot 2.6.51</h1>
+            <p class="rn-tagline">The 2.6.50 crash is fixed, and ban reports are here</p>
+            <div class="rn-meta">
+                <span><strong>November 3, 2026</strong></span>
+                <span>by Microbot Team</span>
+            </div>
+            <div class="rn-actions">
+                <a class="c-button c-button--primary" href="../index.html">Download Microbot</a>
+                <a class="c-button" href="../releases.html">All releases</a>
+            </div>
+            </div>
+            <div class="rn-hero-art"><img class="rn-sprite" src="../images/releases/2.6.51/skull.png" alt=""></div>
+        </div>
+    </section>
+
+    <div class="rn-shell">
+        <div class="rn-layout">
+        <aside class="rn-toc" aria-label="In this release">
+            <div class="rn-toc-title">In this release</div>
+            <ol>
+                <li><a href="#wiki-dps">The 2.6.50 Equipment Stats error is gone</a></li>
+                <li><a href="#ban-reports">Anonymous ban reports, if you want them</a></li>
+                <li><a href="#report-a-problem">The tour shows how to report a problem</a></li>
+                <li><a href="#walker">Walker and click fixes</a></li>
+                <li><a href="#dashboard">The dashboard catches up in seconds</a></li>
+                <li><a href="#plugins">Plugin updates</a></li>
+                <li><a href="#fixes">Other changes</a></li>
+                <li><a href="#developers">For script developers</a></li>
+                <li><a href="#update">How to update</a></li>
+            </ol>
+        </aside>
+        <article class="rn-article">
+            <details class="rn-toc-mobile">
+                <summary>In this release</summary>
+                <ol>
+                <li><a href="#wiki-dps">The 2.6.50 Equipment Stats error is gone</a></li>
+                <li><a href="#ban-reports">Anonymous ban reports, if you want them</a></li>
+                <li><a href="#report-a-problem">The tour shows how to report a problem</a></li>
+                <li><a href="#walker">Walker and click fixes</a></li>
+                <li><a href="#dashboard">The dashboard catches up in seconds</a></li>
+                <li><a href="#plugins">Plugin updates</a></li>
+                <li><a href="#fixes">Other changes</a></li>
+                <li><a href="#developers">For script developers</a></li>
+                <li><a href="#update">How to update</a></li>
+                </ol>
+            </details>
+<p class="rn-lede">If you updated to 2.6.50 and opened the Equipment Stats screen with the Wiki plugin on, your client log filled with errors. 243 players hit it in the first day. 2.6.51 stops the error. It also adds anonymous ban reports that you can turn off, so the community can see which scripts get accounts banned, and a new tour step that shows where the bug button is. The walker stops planning quetzal trips you haven't unlocked, gets through the Biohazard gate guard, and no longer gives up when a fishing spot sits in the middle of a river. On the Hub there is a new Auto Gauntlet plugin and 21 fixes, among them Tempoross, Tithe Farm, Blast Furnace, Slayer, Auto Woodcutting and Mahogany Homes.</p>
+<h2 id="wiki-dps">The 2.6.50 Equipment Stats error is gone</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.51/wiki.png"/>2.6.50 brought in a RuneLite change to the Wiki plugin's View DPS button. On Microbot it threw an error every time you opened the Equipment Stats screen from your Worn Equipment tab, or the worn equipment view in the bank. The button didn't appear, and the client log showed the same error over and over. It was the most common error we saw last week: more than 8,000 times from 243 players, all on 2.6.50.</p>
+<div class="rn-compare">
+<div class="is-before">
+<div class="rn-compare-label">2.6.50</div>
+<p>You open Equipment Stats to check your Slash bonus before a Slayer task. No View DPS button, and an error lands in the log each time you open the screen.</p>
+</div>
+<div class="is-after">
+<div class="rn-compare-label">2.6.51</div>
+<p>The screen opens without an error. If the game's layout isn't what the Wiki plugin expects, the client leaves the button out quietly instead of crashing.</p>
+</div>
+</div>
+<h2 id="ban-reports">Anonymous ban reports, if you want them</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.51/skull.png"/>Players on Discord kept asking the same thing: which scripts get accounts banned, and is there a ban wave right now? To answer that we need two numbers, how many bans happen and how many hours each script runs. 2.6.51 adds both, and you choose whether your client takes part.</p>
+<p>You'll find the choice in <strong>Microbot settings</strong> under <strong>General</strong>, as <strong>Ban reports and script runtime</strong>:</p>
+<ul>
+<li><strong>Ask me</strong> (the default) shares an hourly total of how long each Hub script ran, for example "Auto Woodcutting, 52 minutes". It never includes your account name. When a ban shows up, the client asks you before it sends anything.</li>
+<li><strong>Always send</strong> shares the same runtime totals and sends ban reports without asking.</li>
+<li><strong>Never send</strong> turns off both the runtime totals and the ban reports.</li>
+</ul>
+<p>Turning off telemetry still turns all of this off, whatever you pick here.</p>
+<p>Here is how it looks. Say you ran Auto Mining for a week, and one morning your account shows the "account disabled" screen at login. A small window opens next to the client. It names the account so you know which one it means, though that name stays on your computer. It reminds you that the same screen can also mean a locked account, lists every field it would send, and asks what the message centre on the website says: <strong>Permanent</strong>, <strong>Temporary</strong>, <strong>I don't know yet</strong>, or <strong>Not a ban</strong>. If you pick Not a ban, nothing is sent. Your Send or Don't send answer is remembered for that account for 14 days. If you close the window, the client asks again after a restart. Tick <strong>Do this every time</strong> to stop being asked.</p>
+<p>A report contains the scripts you ran on that account with their hours over the last 7 and 30 days, whether it was a member, its total level rounded down to the nearest 50, how many days and how long you played, breaks, idle time rounded to 15 minutes, and your Microbot version. It never contains your username, password or character name. When the client can't tell for sure which account was banned, it sends nothing.</p>
+<div class="rn-note">
+<span class="rn-note-title">Where does the runtime come from?</span>
+<p>While you're logged in with a Hub script running, the client keeps a 30-day tally per account in your <code>.runelite/microbot/ban-ledger</code> folder. Accounts are stored there as hashes, not names. Scripts you run together split the time, scripts from outside the Hub count as "custom", and the file for an account you haven't used in 60 days is deleted.</p>
+</div>
+<h2 id="report-a-problem">The tour shows how to report a problem</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/icons/bug-report.png"/>Most of the fixes in this release started as a bug report sent from the client. The welcome tour now has a step for that. Step 10 of 11 points at the red bug button: "Script stuck or client acting up? Click the red bug button, choose Report a problem, pick the plugin, say what happened and click Send. Your password is never sent." A yellow dot on the button means there's news under <strong>My reports</strong>, such as a fix or a question about your report.</p>
+<p>The last step, now called <strong>More help</strong>, points out the grey bug at the top of each plugin's settings, which opens a report with that plugin already picked, plus <strong>Safe mode next start</strong> for when a plugin crashes the client. New players see the step on their first start. If you've already finished the tour, replay it from the same bug menu to see it.</p>
+<h2 id="walker">Walker and click fixes</h2>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/transportation.png"/></span><strong>No quetzal trips you haven't unlocked.</strong> A player on Discord watched the walker head to the Varrock quetzal for a trip to Civitas illa Fortis on an account that hadn't done the quest. The Travel failed and the script stood still. The walker now only uses the Primio quetzal once Children of the Sun is done.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/quest.png"/></span><strong>The Biohazard gate guard.</strong> In Biohazard, the guard at the south-east Varrock gate stops you to search you. Quest Helper's walker kept clicking the closed gate for about a minute and a half instead. It now clicks through the search and walks on.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/fishing.png"/></span><strong>Targets in the water.</strong> After banking at the Soul Wars lobby chest, Auto Fishing sent one player to a fishing spot in the middle of a river, and every walk failed at once with "unreachable", about once a second. When every tile next to a target is water, the walker now looks further out, up to 10 tiles, for the nearest dry spot.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/construction.png"/></span><strong>"I can't reach that" inside instances.</strong> In your house or at Tempoross, a click that got "I can't reach that" used up all its retries in about a second, and the client paused your scripts with the "tried to interact with an object N times" pop-up. That stopped Construction in the middle of a build. Recovery now walks to the right spot in instances, and old failed attempts no longer count against a click made much later.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/smithing.png"/></span><strong>Objects behind the chatbox or side panel.</strong> At the Blast Furnace, one player's bot stood still for 7 minutes because the Bank chest was hidden behind an interface and turning the camera didn't help. If an object is still covered after the camera turns and it's more than 2 tiles away, the client now walks closer and logs "Bank chest is behind the chatbox or side panel - walking closer so it can be clicked."</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/bank.png"/></span><strong>Banking during a loading screen.</strong> Scripts that bank and walk back, such as Auto Looter's flax picker, could hit an error when your position was briefly unknown, for example during a world hop. They now wait and try again.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/transportation.png"/></span><strong>Stopping the walker cleanly.</strong> Stopping Auto Login or another script could leave a pathfinding task behind and log "Error disabling plugin". That's fixed.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/construction.png"/></span><strong>No more POH log spam.</strong> Opening the House Features panel in Shortest Path wrote seven "Failed to poh checkbox config" lines, even if you never use house teleports. Options you've never set now count as off and log nothing.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/inventory-setups.png"/></span><strong>Noted items in Inventory Setups.</strong> A setup with a noted row, such as 100 noted Bones for AIO Fighter, failed on that row every time the script banked, so the setup never loaded. Noted rows are now checked and withdrawn by their exact item, so 100 noted Bones never turns into Big bones.</li>
+</ul>
+<h2 id="dashboard">The dashboard catches up in seconds</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.51/cloud-sync.png"/>If your client is linked to the Microbot dashboard, logging in, logging out or switching accounts used to take up to about 26 seconds to show up there. The client now sends the change right away, so the dashboard updates within a few seconds. World hops and loading screens don't send anything extra, so the dashboard keeps showing "in game" while you hop instead of flickering. After a hop, the world number can still take up to about 26 seconds to change, as before.</p>
+<h2 id="plugins">Plugin updates</h2>
+<div class="rn-plugin-list">
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/corrupted-bow.png"/></span><span>Auto Gauntlet<span class="rn-plugin-version">1.7.3</span></span></div>
+<div class="rn-plugin-body"><p>A new plugin that runs the Corrupted Gauntlet from start to finish: it gathers and crafts your gear, fights the Hunllef, loots the chest and goes again. The default loadout is tier 2 armour, a tier 3 bow and staff, 3 potions and 14 paddlefish, and you can change all of that. In the fight it prays against each attack, switches weapons after the sixth hit, dodges tornadoes and floor tiles, and eats and drinks at the levels you set. You can also run it for the prep only or the boss only, choose the normal Gauntlet, and take Break Handler breaks in the lobby.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/fishing.png"/></span><span>Tempoross<span class="rn-plugin-version">2.24.8</span></span></div>
+<div class="rn-plugin-body"><p>During or right after a wave, the tether click on the totem or mast could get "I can't reach that". The script then used up every retry in about a second, the client paused all your scripts with the "tried to interact with an object" pop-up, and you were stuck until you closed it. Tethering and the other clicks work again, and with the client's own instance fix above, a blocked click now walks you closer instead.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/farming-patch.png"/></span><span>Tithe Farm<span class="rn-plugin-version">1.1.16</span></span></div>
+<div class="rn-plugin-body"><p>Players saw only about 4 of their 20 plants make it to harvest. The script planted the whole lane, about 2 minutes of work, before it watered anything, so the first plants had already died. Then it replanted the dead patches mid-round and finally sat idle. It now waters growing plants before it plants new seeds, and it recognises blighted patches.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/smithing.png"/></span><span>Blast Furnace<span class="rn-plugin-version">1.2.4</span></span></div>
+<div class="rn-plugin-body"><p>After a few good trips, the "How many would you like to take?" prompt at the Bar dispenser opened and was never confirmed. Your bars stayed in the dispenser and you walked to the bank with an empty inventory, over and over. The script now keeps confirming the prompt until the bars are in your inventory.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/slayer-master.png"/></span><span>Slayer<span class="rn-plugin-version">1.1.8</span></span></div>
+<div class="rn-plugin-body"><p>With <strong>Auto Travel</strong> off, you could walk to your task yourself and stand among the monsters, and the script still never attacked, ate or drank a potion. The log just said "Auto travel disabled, staying in DETECTING_TASK". It now starts fighting once you're at the task location or a task monster is within your attack radius.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/woodcutting.png"/></span><span>Auto Woodcutting<span class="rn-plugin-version">1.8.13</span></span></div>
+<div class="rn-plugin-body"><p>Three fixes. In the Woodcutting Guild the script kept clicking a redwood that had just been chopped down instead of the live one next to it, and now it skips felled trees. With <strong>Burn logs at campfire</strong>, it used to bank for more logs after burning and never go back to the trees, and now it goes back to chopping. And on a tile where "You can't light a fire here", one player's script tried 217 times in a row. It now moves to another tile, whatever the letter case of the message.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/mining.png"/></span><span>Auto Mining<span class="rn-plugin-version">1.0.18</span></span></div>
+<div class="rn-plugin-body"><p>A low-level miner near Rimmington on a free world stayed on "Locating the mine" forever, because the script kept walking toward the members-only Ardougne mine. On free worlds it now skips members-only mines. It also no longer errors when <strong>Max players in area</strong> is on and your position is briefly unknown during login or a world hop.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/construction.png"/></span><span>Mahogany Homes<span class="rn-plugin-version">0.0.19</span></span></div>
+<div class="rn-plugin-body"><p>With <strong>Use NPC Contact</strong> on, Astral Contact sometimes went straight to Amy's contract list without showing the contact chooser. The script waited for the chooser, logged "Astral Contact cast, but contact selection did not open.", and recast or walked to a bank. It now picks your contract tier from Amy's list either way.</p></div>
+</div>
+</div>
+<p>More Hub fixes in this release:</p>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/agility.png"/></span><strong>Wilderness Agility 1.6.4:</strong> stopped after the rocks because the Agility dispenser's Search option was renamed. It now uses the new option and keeps lapping.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/clue-scroll.png"/></span><strong>Clue Solver 1.0.11:</strong> a beginner Hot Cold clue never moved forward and flooded chat and the log with thousands of errors while the CPU ran hot. It now runs the step once and stops with one clear message if something goes wrong.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/fishing.png"/></span><strong>AIO Cam Torum/Dozaal 1.0.2:</strong> in fishing mode the character ran back and forth between a far fishing spot and the fishing tile. It now only clicks spots inside the fishing area.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/thieving.png"/></span><strong>Blackjack 1.1.30:</strong> another player's chat line can no longer be mistaken for a knock-out, pickpocket or stun result. Only real game messages count.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/thieving.png"/></span><strong>Thieving 2.1.11:</strong> when no start point is set, the script uses the spot you're standing on instead of throwing an error.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/crafting.png"/></span><strong>Jewelry 1.0.3:</strong> making Ruby necklaces at Edgeville, one player ran out of gold bars with 13 rubies left, and the script stood at the furnace doing nothing. It now banks when the bars run out.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/thieving.png"/></span><strong>Rogues' Den 1.0.3:</strong> no longer errors when your position is briefly unknown, for example during a loading screen.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/cooking.png"/></span><strong>Cooking 1.1.8:</strong> with raw shrimps at Al Kharid, the script took them out of the bank and then stood still. It now walks to the range and cooks.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/thieving.png"/></span><strong>House Thieving 1.1.3:</strong> when the owner came home, the script couldn't climb out of the window because its option is now called Exit, so it walked out the door into the owner and took damage. It uses the window again.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/cooking.png"/></span><strong>The Mess 1.1.2:</strong> in pizza mode, empty bowls filled your inventory and the script stalled trying to take tomatoes. It now hands the bowls back first.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/magic.png"/></span><strong>Arceuus Library 1.0.2:</strong> after a bookcase came back with "You don't find anything useful here.", the script searched the same one about every 11 seconds forever. It now moves on to the next candidate.</li>
+</ul>
+<h2 id="fixes">Other changes</h2>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/quest.png"/></span>Quest and game state checks read the right values again. A varbit change could overwrite a whole game setting, for example turning a stored 384 into 1, so a script could think a quest step or setting was different from what you see in game.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/config.png"/></span>Clicking the settings cog of a plugin, such as AIO Fighter, opens its settings again when a dropdown option, like its special attack weapon, has never been set.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/magic.png"/></span>High Alchemy in AIO Fighter, Giant Mole and Slayer, and the profit check in QoL, no longer fail on items the client hasn't loaded yet.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/alert.png"/></span>No more random errors when a script reads the list of nearby players, a crash when the client closes a pop-up that was already gone, or errors when a tile highlight reaches the edge of the screen.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/alert.png"/></span>Destroying an item no longer crashes when the confirm dialog doesn't open.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.51/antiban.png"/></span>Antiban action cooldowns end properly when a script hasn't set an activity. In AIO Cam Torum/Dozaal's golem mode, the character used to kill one golem and then stand still for good.</li>
+</ul>
+<h2 id="developers">For script developers</h2>
+<ul>
+<li>The Agent Server has a <code>/ge</code> endpoint to list, buy, sell, collect and abort Grand Exchange offers, and a <code>/plugins</code> endpoint to search, install and remove Plugin Hub plugins. A failed GE action returns 409 with the current offers. <code>/bank/withdraw</code> takes <code>"noted"</code>, and the CLI has <code>ge</code>, <code>plugins</code>, <code>bank withdraw --noted</code> and <code>npcs interact --id</code>.</li>
+<li><code>MicrobotPluginManager.installPlugin</code>, <code>updatePlugin</code> and <code>removePlugin</code> return a <code>Future</code> you can wait on.</li>
+<li>The Agent Server's nearby NPC list is sorted reliably by distance.</li>
+<li><code>Rs2Antiban.isCategoryBusy()</code> is a null-safe check for the current activity category.</li>
+<li><code>Rs2Walker.isWalkingOnCurrentThread()</code> tells you whether a click comes from inside the walker. A covered object is only walked to when it doesn't.</li>
+<li><code>Rs2ItemModel.getHaPrice</code> loads the item composition when it's missing, and <code>Rs2Player.getPlayers</code> takes its snapshot on the client thread.</li>
+<li>The Primio quetzal rows in <code>npcs.tsv</code> require Children of the Sun.</li>
+<li>Internal code cleanup with no change for players.</li>
+</ul>
+<h2 id="update">How to update</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.51/microbot-hub.png"/>Restart Microbot to get client 2.6.51. Auto Gauntlet and the updated plugins show up in the Microbot Hub panel inside the client. To choose what happens with ban reports, open Microbot settings and look under General.</p>
+<p class="rn-credit">Game images © Jagex Ltd., via the <a href="https://oldschool.runescape.wiki" rel="noopener" target="_blank">Old School RuneScape Wiki</a>.</p>
+
+<nav class="rn-pager" aria-label="More releases">
+    <a class="rn-pager-prev" href="2.6.49.html"><small>Previous release</small><span>2.6.49</span></a>
+</nav>
+        </article>
+        </div>
+    </div>
+</main>
+
+<footer class="mb-footer">
+    <div class="container">
+        <div class="mb-footer__row">
+            <a class="mb-brand" href="../index.html" aria-label="Microbot home">
+                <img src="../microbot/logo.png" alt="" width="44" height="44">
+                <span class="mb-brand__text"><span class="mb-brand__name">Microbot</span><span class="mb-brand__tag">Old School client</span></span>
+            </a>
+            <ul class="mb-footer__links">
+                <li><a href="../plugins.html">Plugins</a></li>
+                <li><a href="../releases.html">Releases</a></li>
+                <li><a href="https://github.com/chsami/microbot" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://discord.gg/zaGrfqFEWE" target="_blank" rel="noopener">Discord</a></li>
+                <li><a href="https://chatgpt.com/g/g-LM0fGeeXB-microbot-documentation" target="_blank" rel="noopener">Docs assistant</a></li>
+            </ul>
+        </div>
+        <p class="mb-footer__legal">Microbot &copy; 2024. All rights reserved. <a href="../privacy.html">Privacy policy</a> &middot; <a href="../terms.html">Terms of service</a>.</p>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('.rn-article img, .rn-article video').forEach(function (m) {
+        function hide() {
+            var box = m.closest('.rn-gallery') && m.closest('.rn-gallery').children.length > 1 ? m : (m.closest('figure') || m);
+            box.style.display = 'none';
+        }
+        if (m.tagName === 'IMG' && m.complete && m.naturalWidth === 0 && m.getAttribute('src')) hide();
+        m.addEventListener('error', hide);
+    });
+</script>
+<script src="../microbot/mb-site.js"></script>
+</body>
+</html>
