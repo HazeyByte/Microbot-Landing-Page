@@ -51,6 +51,12 @@ Copy the newest page in `releases/` and replace its head metadata and `<main>`, 
 `releases.css` imports the tokens and the old stylesheets are kept, but it has the old header and footer. Remove both once
 release notes use the shared template.
 
+## Addresses
+
+The website is `https://www.themicrobot.com`: use it in canonical, `og:` and `twitter:` tags, `sitemap.xml`, `robots.txt`
+and `llms.txt`. `microbot.cloud` hosts only the API and dashboard, so website paths there return 404. New release pages
+also need an entry in `sitemap.xml`.
+
 ## Adding a page
 
 1. Copy `docs/page-template.html` to the site root, set the title, description and `aria-current` on its nav item.
