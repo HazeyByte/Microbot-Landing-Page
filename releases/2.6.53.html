@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Microbot 2.6.53 release notes</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Microbot 2.6.53: a pause button that pauses every script at once, a Local Plugins window to add, update and remove plugin JARs without a restart, Quest Helper, banking and login fixes, and Hub updates including the new Sulliuscep plugin, Auto Gauntlet, Thieving, Arceuus Library and Tempoross.">
+    <link rel="canonical" href="https://microbot.cloud/releases/2.6.53.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Microbot">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Microbot 2.6.53 release notes">
+    <meta property="og:description" content="Microbot 2.6.53: a pause button that pauses every script at once, a Local Plugins window to add, update and remove plugin JARs without a restart, Quest Helper, banking and login fixes, and Hub updates including the new Sulliuscep plugin, Auto Gauntlet, Thieving, Arceuus Library and Tempoross.">
+    <meta property="og:image" content="https://microbot.cloud/images/general/logo.png">
+    <meta property="og:url" content="https://microbot.cloud/releases/2.6.53.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Microbot 2.6.53 release notes">
+    <meta name="twitter:description" content="Microbot 2.6.53: a pause button that pauses every script at once, a Local Plugins window to add, update and remove plugin JARs without a restart, Quest Helper, banking and login fixes, and Hub updates including the new Sulliuscep plugin, Auto Gauntlet, Thieving, Arceuus Library and Tempoross.">
+    <meta name="theme-color" content="#0e0e0e">
+    <link rel="stylesheet" href="../microbot/app.min.css" media="all">
+    <link rel="stylesheet" href="../microbot/341e4a57816af3ba440d891ca87450ff_framework.css.c1bcd9467a7eeb9006567801face652d.css" media="all">
+    <link rel="stylesheet" href="../microbot/20446cf2d164adcc029377cb04d43d17_flags.css.be60c469fe9d673f833faaa74a81e375.css" media="all">
+    <link rel="stylesheet" href="../microbot/90eb5adf50a8c640f633d47fd7eb1778_core.css.730a336650d62c3b59570edc9065b630.css" media="all">
+    <link rel="stylesheet" href="../microbot/5a0da001ccc2200dc5625c3f3934497d_core_responsive.css.1d08c9ed37ed1cae43d3985a3b2316ad.css" media="all">
+    <link rel="stylesheet" href="../microbot/releases/releases.css">
+</head>
+<body style="background-color:black !important;" class="rn-page ipsApp ipsApp_front ipsClearfix ipsJS_has ipsApp_noTouch">
+<header class="c-header">
+    <!-- Event Start -->
+    <div class="c-events-block py-2">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+            <div></div>
+            <a href="https://discord.gg/zaGrfqFEWE" target="_blank" rel="noreferrer noopener"
+               class="c-events-block__right d-flex flex-row align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" class="me-2" viewBox="0 0 71 55"><title>logo
+                    discord</title>
+                    <g fill="none" class="nc-icon-wrapper">
+                        <g clip-path="url(#clip0)">
+                            <path d="M60.105 4.898A58.55 58.55 0 0 0 45.653.415a.22.22 0 0 0-.233.11 40.784 40.784 0 0 0-1.8 3.697c-5.456-.817-10.886-.817-16.23 0-.485-1.164-1.201-2.587-1.828-3.697a.228.228 0 0 0-.233-.11 58.386 58.386 0 0 0-14.451 4.483.207.207 0 0 0-.095.082C1.578 18.73-.944 32.144.293 45.39a.244.244 0 0 0 .093.167c6.073 4.46 11.955 7.167 17.729 8.962a.23.23 0 0 0 .249-.082 42.08 42.08 0 0 0 3.627-5.9.225.225 0 0 0-.123-.312 38.772 38.772 0 0 1-5.539-2.64.228.228 0 0 1-.022-.378c.372-.279.744-.569 1.1-.862a.22.22 0 0 1 .23-.03c11.619 5.304 24.198 5.304 35.68 0a.219.219 0 0 1 .233.027c.356.293.728.586 1.103.865a.228.228 0 0 1-.02.378 36.384 36.384 0 0 1-5.54 2.637.227.227 0 0 0-.121.315 47.249 47.249 0 0 0 3.624 5.897.225.225 0 0 0 .249.084c5.801-1.794 11.684-4.502 17.757-8.961a.228.228 0 0 0 .092-.164c1.48-15.315-2.48-28.618-10.497-40.412a.18.18 0 0 0-.093-.084zm-36.38 32.427c-3.497 0-6.38-3.211-6.38-7.156 0-3.944 2.827-7.156 6.38-7.156 3.583 0 6.438 3.24 6.382 7.156 0 3.945-2.827 7.156-6.381 7.156zm23.593 0c-3.498 0-6.38-3.211-6.38-7.156 0-3.944 2.826-7.156 6.38-7.156 3.582 0 6.437 3.24 6.38 7.156 0 3.945-2.798 7.156-6.38 7.156z"
+                                  fill="currentColor"></path>
+                        </g>
+                        <defs>
+                            <clippath id="clip0">
+                                <path fill="currentColor" d="M0 0h71v55H0z"></path>
+                            </clippath>
+                        </defs>
+                    </g>
+                </svg>
+                <p class="mb-0">Join us on Discord</p>
+            </a>
+        </div>
+    </div>
+    <div class="c-border-red mb-2"></div>
+    <!-- Event End -->      <!-- Navigation Start -->
+    <nav class="c-nav navbar navbar-expand-sm py-2" style="flex-wrap:nowrap;justify-content: flex-start">
+        <div class="container align-items-stretch">
+            <a class="navbar-brand me-0 me-lg-3 me-xl-5" href="../index.html">
+                <img src="../microbot/logo.png" class="c-nav__logo" loading="lazy" alt="logo">
+            </a>
+            <div class="p-3 p-xl-0" style="line-height: 2rem;width: 100%;" id="navbarMenu">
+                <ul class="navbar-nav me-auto text-center text-xl-left gap-3 gap-xl-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.github.com/chsami/microbot" target="_blank">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://discord.gg/zaGrfqFEWE" target="_blank">Discord</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://chatgpt.com/g/g-LM0fGeeXB-microbot-documentation"
+                           target="_blank">ChatGPT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../releases.html">Releases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../plugins.html">Plugins</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul id="elMobileNav"
+                class="ipsList_inline ipsResponsive_hideDesktop ipsResponsive_block my-auto d-flex gx-2"
+                data-controller="core.front.core.mobileNav" data-default="all">
+
+                <li class="navbar-toggler my-auto py-3 position-relative" data-ipsdrawer=""
+                    data-ipsdrawer-drawerelem="#elMobileDrawer">
+                    <a href="#">
+                        <i class="fa fa-navicon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navigation End -->
+</header>
+
+<main>
+    <section class="rn-hero">
+        <div class="container">
+            <div>
+            <div class="rn-eyebrow">Release notes</div>
+            <h1>Microbot 2.6.53</h1>
+            <p class="rn-tagline">Pause every script with one click, and add plugin JARs without a restart</p>
+            <div class="rn-meta">
+                <span><strong>November 5, 2026</strong></span>
+                <span>by Microbot Team</span>
+            </div>
+            <div class="rn-actions">
+                <a class="c-button c-button--primary" href="../index.html">Download Microbot</a>
+                <a class="c-button" href="../releases.html">All releases</a>
+            </div>
+            </div>
+            <div class="rn-hero-art"><img class="rn-sprite" src="../images/releases/2.6.53/pause.png" alt=""></div>
+        </div>
+    </section>
+
+    <div class="rn-shell">
+        <div class="rn-layout">
+        <aside class="rn-toc" aria-label="In this release">
+            <div class="rn-toc-title">In this release</div>
+            <ol>
+                <li><a href="#pause">Pause every script at once</a></li>
+                <li><a href="#local-plugins">Add plugin JARs while the client runs</a></li>
+                <li><a href="#quest-helper">Quest Helper fixes</a></li>
+                <li><a href="#banking-login">Banking and login fixes</a></li>
+                <li><a href="#plugins">Plugin updates</a></li>
+                <li><a href="#fixes">Other changes</a></li>
+                <li><a href="#developers">For script developers</a></li>
+                <li><a href="#update">How to update</a></li>
+            </ol>
+        </aside>
+        <article class="rn-article">
+            <details class="rn-toc-mobile">
+                <summary>In this release</summary>
+                <ol>
+                <li><a href="#pause">Pause every script at once</a></li>
+                <li><a href="#local-plugins">Add plugin JARs while the client runs</a></li>
+                <li><a href="#quest-helper">Quest Helper fixes</a></li>
+                <li><a href="#banking-login">Banking and login fixes</a></li>
+                <li><a href="#plugins">Plugin updates</a></li>
+                <li><a href="#fixes">Other changes</a></li>
+                <li><a href="#developers">For script developers</a></li>
+                <li><a href="#update">How to update</a></li>
+                </ol>
+            </details>
+<p class="rn-lede">Say a friend trades you while Auto Fishing is running, or you want to check your bank yourself for a minute. Until now you had to turn the script off and set it up again afterwards. 2.6.53 adds a pause button to the client header: one click pauses every running script and gives you the mouse and keyboard, and a second click lets them carry on where they stopped. You can also add, update and remove plugin JARs from a new Local Plugins window without restarting Microbot. On top of that, Quest Helper stops walking once you turn Semi-Auto off, bank trips pick a bank you can walk to instead of teleporting home, and relogs no longer fail on a world change. On the Hub there is a new Sulliuscep woodcutting plugin, bigger updates to Auto Gauntlet, Barbarian Fisher, Thieving, Arceuus Library, Tithe Farm, Fletcher and Drift Net, and 13 more fixes, among them Tempoross, Barrows, Wintertodt and Giants' Foundry.</p>
+<h2 id="pause">Pause every script at once</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.53/pause.png"/>There is a new pause button in the client header, right next to the <strong>Enable/Disable Input</strong> button. Click it and every running script pauses. Your plugins stay on, and nothing is reset: a script that was halfway through a bank trip still knows where it was going. Manual input is turned on and the game window gets focus, so you can click and type straight away.</p>
+<p>While scripts are paused, the button turns into an amber play button. Click it to resume. Input goes back to how it was before you paused, unless you changed it yourself in the meantime.</p>
+<div class="rn-compare">
+<div class="is-before">
+<div class="rn-compare-label">Before</div>
+<p>You're running Auto Mining and a clan mate asks for a trade. You turn the plugin off, trade, turn it back on, and the script starts its routine again from the beginning.</p>
+</div>
+<div class="is-after">
+<div class="rn-compare-label">2.6.53</div>
+<p>You click pause, accept the trade, and click the amber play button. Auto Mining checks where you are and keeps mining. The client log says "All scripts resumed".</p>
+</div>
+</div>
+<p>A few things to know:</p>
+<ul>
+<li><strong>The game keeps going.</strong> Pause stops Microbot from sending new actions. If your character was already walking or fighting, the game finishes that action. Check where you are before you resume, for example if you paused in the middle of a fight.</li>
+<li><strong>No stray clicks or text.</strong> A click or a line of text a script was about to send when you paused is thrown away, so half a message from a script never ends up in your chat.</li>
+<li><strong>Breaks still happen.</strong> Pause doesn't change Break Handler. If a break was due while you were paused, it starts when you resume.</li>
+<li><strong>Each plugin tells you once.</strong> A script that wants to act while paused writes one line in your game chat, such as "Auto Fishing is waiting: scripts are paused", instead of filling it up.</li>
+<li><strong>It lasts until you resume.</strong> Logging out or hopping worlds doesn't undo it. Closing the client does.</li>
+</ul>
+<div class="rn-note">
+<span class="rn-note-title">Does every plugin pause?</span>
+<p>Plugins built on Microbot's own script loop pause right away, which covers most of the Hub. A plugin that runs its own timers or threads may keep some of its logic going. Clicks and key presses it sends through Microbot are still blocked while you're paused.</p>
+</div>
+<h2 id="local-plugins">Add plugin JARs while the client runs</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.53/add-jar.png"/>If you test plugins that a friend built, or build your own, you used to drop the JAR in a folder and restart Microbot every time it changed. Open the Microbot plugin list and click <strong>Local Plugins</strong> at the top. The window that opens lists every plugin JAR in your plugin folder, with its version and whether it's running:</p>
+<ul>
+<li><strong>Add JAR</strong> copies a JAR into the plugin folder and loads it. Turn the plugin on in the plugin list afterwards.</li>
+<li><strong>Update JAR</strong> swaps the selected plugin for a newer JAR and keeps your settings.</li>
+<li><strong>Reload</strong> restarts the selected plugin from its JAR.</li>
+<li><strong>Remove</strong> turns the plugin off and deletes its JAR from the folder. Your settings are kept, so they're still there if you add it again.</li>
+<li><strong>Rescan folder</strong> picks up JARs you added, replaced or deleted in the folder yourself.</li>
+<li><strong>Watch folder for changes</strong> loads a JAR about two seconds after it stops changing, so you can copy in a fresh build and see it in the client right away.</li>
+<li><strong>Change folder...</strong> switches to another plugin folder. Every plugin in the current folder is turned off, including ones from the Plugin Hub, but their files stay where they are.</li>
+</ul>
+<p>For example, a friend sends you <code>MyPlugin.jar</code> with a fix. You click <strong>Add JAR</strong>, pick the file and turn the plugin on. When they send version 2, you select it, click <strong>Update JAR</strong>, and your settings are still there. The folder is <code>.runelite/microbot-plugins</code> in your home folder unless you change it.</p>
+<p>The Microbot Plugin Hub got a few changes along the way:</p>
+<ul>
+<li>Installing, updating and removing a Hub plugin now runs in the background. The button shows that it's busy, and if something fails you get an error window instead of nothing happening.</li>
+<li>When the Plugin Hub can't load its list, it shows a <strong>Retry</strong> button.</li>
+<li>The "Microbot Plugins Not Loaded" notice at startup now also lists JARs that failed to load or need a newer client, not only in the log.</li>
+<li>A plugin that hit an error while being turned off can be turned on again without restarting the client.</li>
+</ul>
+<h2 id="quest-helper">Quest Helper fixes</h2>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/quest-helper.png"/></span><strong>Semi-Auto off means off.</strong> Two players turned off Semi-Auto questing with the Quest Helper icon in the toolbar, and their character kept walking to the step that was active before, back and forth, even after the plugin was off. Turning Semi-Auto off, from the toolbar icon or the settings, now stops the walk at once. You also no longer get a "Quest helper stopped" message blaming your bank or coins after you turned it off yourself.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/quest-helper.png"/></span><strong>Cold War penguin trips.</strong> After the visit to the Lumbridge sheep farm, Quest Helper went straight back to the Ardougne Zoo penguin pen in human form. The walker clicked the enclosure door over and over, and the game answered "I can't go in there." each time. It now has Larry use Tuxedo-time on you first, and reminds you to bring a raw cod or wear the Ring of Charos (a), and to take off your cape and weapons. The steps where you talk to the Thing in Lumbridge also check that you're a penguin.</li>
+</ul>
+<h2 id="banking-login">Banking and login fixes</h2>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/bank.png"/></span><strong>A bank you can walk to.</strong> A player mining coal at the Barbarian Village mine with banking on saw Auto Mining cast Lumbridge Home Teleport when the inventory filled, bank at the top of Lumbridge castle, and then walk about 267 tiles back to the rocks. Edgeville bank was a short walk away. Scripts that bank and walk back, and the same for deposit boxes, now pick the closest bank on foot and only use teleports when no bank can be reached by walking. The log tells you why, for example "Banking at EDGEVILLE (closest bank on foot, so the walk back stays short)".</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/login.png"/></span><strong>Relogs after a lost connection.</strong> When Break Handler tried to log a player back in after the connection dropped, the client tried to change worlds before it was on the login screen. Every attempt failed with an error, 18 times in 25 minutes for one player. The client now only changes worlds on the login screen.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/world.png"/></span><strong>A world to hop to, always.</strong> When no world matched a script's filters, for example a members world in a region that had none listed, picking a random world threw an error. House Thieving stopped with a message that meant nothing to the player. The client now falls back to world 360 for members or 383 for free-to-play.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/inventory-setups.png"/></span><strong>Inventory Setups open again.</strong> Clicking a setup whose saved inventory or equipment list was shorter than the full slot count threw an error. The panel stopped halfway, so the rune pouch, equipment, spellbook and notes never showed, and you couldn't open or edit the setup. Short lists are now filled with empty slots and the setup opens normally.</li>
+</ul>
+<h2 id="plugins">Plugin updates</h2>
+<div class="rn-plugin-list">
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/woodcutting.png"/></span><span>Dro Sulliuscep Run<span class="rn-plugin-version">1.0.0</span></span></div>
+<div class="rn-plugin-body"><p>A new plugin that chops Sulliusceps on Fossil Island, at up to about 105k Woodcutting XP an hour. It travels with a digsite pendant and the Magic Mushtree to the Sticky Swamp, handles the vine route, and keeps the mushrooms and fossils you find. You choose between banking every run or filling the rubber cap mushroom and jumping on it, and you can drop fossils you already have. It can restore special attack and bank at the Ferox Enclave, or use your house through Castle Wars or the Crafting Guild. It eats, cures poison and handles monsters that attack you. Equip your forestry backpack once before you start, and start next to the tree.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/corrupted-bow.png"/></span><span>Auto Gauntlet<span class="rn-plugin-version">1.8.0</span></span></div>
+<div class="rn-plugin-body"><p>In the Hunllef fight it picks better between actions when several are due at once, times food and potions more reliably and moves more accurately. During prep, the <strong>Egniol potions</strong> setting now makes the number of potions you set (2 by default), the overlay's "Missing" row updates as soon as you change a setting, fishing stops at your paddlefish target, and the route after the first demi-bosses is shorter, so your full loadout is ready more often. Pressing the pause or continue hotkey also no longer freezes the client for up to 10 seconds.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/fishing.png"/></span><span>Barbarian Fisher<span class="rn-plugin-version">1.2.0</span></span></div>
+<div class="rn-plugin-body"><p>You can now fish at Mount Quidamortem, the lake by the Chambers of Xeric, as well as Otto's Grotto. There it fills your fish barrel while you fish and empties it with your leaping fish at the Chambers of Xeric bank chest. You can also have it use the dragon harpoon special attack for the +3 Fishing boost whenever your spec bar is full, and pick the order it drops fish in.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/thieving.png"/></span><span>Thieving<span class="rn-plugin-version">2.2.0</span></span></div>
+<div class="rn-plugin-body"><p>Start the plugin at the Grand Exchange with <strong>NPC to Thieve</strong> set to Man, and it used to hop worlds forever looking for men who were never there. It now walks to the nearest place the NPC you picked spawns, outside the Wilderness, and only hops once it's there and the NPC is missing. If it can't find anywhere to go, it stops with a message. Turn off <strong>Walk to NPC location</strong> to get the old behaviour.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/arceuus-library.png"/></span><span>Arceuus Library<span class="rn-plugin-version">1.0.4</span></span></div>
+<div class="rn-plugin-body"><p>Started in Varlamore, the plugin never reached the library: it sent a new walk every tick and could only use local routes. It now travels there with ships, charters and teleports, tries Arceuus library or Kourend castle teleport tabs from your inventory if walking fails, and stops with a clear message after three failed tries. New options: drink stamina or energy potions at the run energy you set and fetch more from the bank, <strong>Reward skill</strong> set to Auto to pick whichever of Magic or Runecraft gives more XP, and <strong>Read reward book</strong>.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/farming-patch.png"/></span><span>Tithe Farm<span class="rn-plugin-version">1.1.17</span></span></div>
+<div class="rn-plugin-body"><p>The new <strong>Use 16 plants</strong> option leaves the short extra column of the lane empty and plants 16 patches instead of 19 or 20, so every plant gets watered in time. It applies from the next round.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/fletching.png"/></span><span>Fletcher<span class="rn-plugin-version">1.7.1</span></span></div>
+<div class="rn-plugin-body"><p>When you string bows and the bank has a bow string spool with string on it, the plugin takes the spool and up to 27 unstrung bows instead of 14 strings and 14 bows, so each trip strings 27 bows. An empty spool falls back to normal bow strings.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/hunter.png"/></span><span>Drift Net<span class="rn-plugin-version">1.1.2</span></span></div>
+<div class="rn-plugin-body"><p>An update to the existing drift net plugin. It sets your nets, watches how full they are, loots full nets and resets empty ones right away, and chases shoals by distance, angle and line of sight. It restocks nets from Annette, and the overlay shows runtime, Fishing and Hunter XP per hour, your next break and the current status.</p></div>
+</div>
+</div>
+<p>More Hub fixes in this release:</p>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/fishing.png"/></span><strong>Tempoross 2.24.9:</strong> in solo games, the bot ran back and forth between fires on the other boat and the fishing spot until the game was lost. It now only douses fires within 5 tiles of you or near your own mast, crates and pump.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/firemaking.png"/></span><strong>AI-Wintertodt 2.2.6:</strong> with 500 or more points and no food left at low warmth, the character waited at the door for the round to end and could die in the arena. It now leaves to restock, and the log says how many points that costs and suggests raising <strong>Healing Items Per Trip</strong>.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/barrows.png"/></span><strong>Barrows 2.5.26:</strong> one player kept about 5,400 Blood runes in a rune pouch, and the script did nothing but log "We have less than 180 Blood rune" several times a second. Runes in the rune pouch now count. Without a Ring of dueling to leave for the bank, it now stops and tells you.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/bank.png"/></span><strong>Bank's Shopper 1.4.5:</strong> when the item you buy is sold out, it hops worlds instead of opening and closing the empty shop. Running out of coins no longer freezes the client behind a pop-up, the plugin turns itself off properly, and turning it off by hand no longer logs you out.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/smithing.png"/></span><strong>Giants' Foundry 1.0.9:</strong> the bot stayed at the polishing wheel or trip hammer for one action after the heat had left the range, which cost 5 quality each time and up to 20 over a trip. It now leaves before that action.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/smithing.png"/></span><strong>BlastoiseFurnace 1.2.5:</strong> with the open coal bag in your inventory, the script stopped with "No coal bag found in inventory and bank." It now recognises both the open and the closed bag.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/attack.png"/></span><strong>Nmz 2.4.6:</strong> when the reward chest asked for your bank PIN and your Microbot profile had none saved, the script crashed on every tick and bought no potions. It now stops and tells you to add your PIN to the profile.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/fishing.png"/></span><strong>Auto Fishing 1.0.12:</strong> after banking at the Isle of Souls chest, a player fishing trout at Barbarian Village was walked to the Observatory instead. The script now goes back to the spot you were fishing.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/agility.png"/></span><strong>Agility 1.3.4:</strong> on the Al Kharid rooftops the script said it was looting a mark of grace and then ran on to the next obstacle. It now picks up marks it spots while you're moving.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/crafting.png"/></span><strong>Jewelry Crafter 1.0.4 and Crafting 1.0.6:</strong> started at a bank with an empty inventory, Jewelry Crafter did nothing and logged an error every loop when no antiban activity was set. Jewelry and Glassblowing now run normally in that case.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/mining.png"/></span><strong>MotherlodeMine 1.9.12:</strong> no more reset of the whole script in the middle of a trip when it tried to walk before a mining spot was picked.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/construction.png"/></span><strong>Mahogany Homes 0.0.20:</strong> no more error during a ladder or stairs climb, while your position is briefly unknown.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/magic.png"/></span><strong>MTA 1.1.11:</strong> after New-maze in the Telekinetic room, the script now waits until you've left the old maze, and it no longer errors while your position is briefly unknown.</li>
+</ul>
+<h2 id="fixes">Other changes</h2>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/magic.png"/></span>Spell casting is more reliable. High Alchemy in AIO Fighter could fail with an error when the spell's options changed in the middle of a cast. Each cast now reads them once.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/alert.png"/></span>When the "How many would you like to make?" menu closes just as a script reads it, the script now treats it as closed and tries again, instead of stopping its loop with "Unexpected error in scheduled loop".</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.53/alert.png"/></span>A script that looks for a button in an interface that has just closed now gets "not found" quietly, without an error in your log.</li>
+</ul>
+<h2 id="developers">For script developers</h2>
+<ul>
+<li><code>ScriptPauseController.isPaused()</code> tells you whether the header pause is on. Custom threads can call <code>ScriptPauseController.awaitResume()</code> at safe points outside locks, and <code>activeTimeNanos()</code> gives a clock that leaves out paused time. Never wait on the client thread or the Swing thread. See <code>docs/manual-pause.md</code>.</li>
+<li>The Agent Server state reports <code>manuallyPaused</code> next to <code>scriptsPaused</code>, and input endpoints return <code>"Scripts are paused"</code> as the reason while paused.</li>
+<li>The new <code>:client:pluginJar</code> Gradle task builds a standalone JAR from one plugin package, for example <code>-PpluginPackage=...yourplugin -PpluginClass=...yourplugin.YourPlugin</code>. The JAR only loads into a client that doesn't already contain that package. See <code>docs/live-plugins.md</code> for the lifecycle rules a plugin needs to reload cleanly.</li>
+<li><code>Rs2RouteRequest.withoutTeleports()</code> asks the pathfinder for a walk-only route. The bank-and-return helpers in <code>Rs2Bank</code> and <code>Rs2DepositBox</code> use it first.</li>
+<li><code>LoginManager</code> only calls <code>changeWorld</code> on the login screen, and <code>Login.getRandomWorld</code> returns 360 or 383 when no world passes the filters.</li>
+<li>Two merges of <code>main</code> into <code>development</code>, with no change for players.</li>
+</ul>
+<h2 id="update">How to update</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.53/microbot-hub.png"/>Restart Microbot to get client 2.6.53. The pause button is in the header next to Enable/Disable Input, and Local Plugins is at the top of the Microbot plugin list. The new and updated plugins show up in the Microbot Hub panel inside the client.</p>
+<p class="rn-credit">Game images © Jagex Ltd., via the <a href="https://oldschool.runescape.wiki" rel="noopener" target="_blank">Old School RuneScape Wiki</a>.</p>
+
+<nav class="rn-pager" aria-label="More releases">
+    <a class="rn-pager-prev" href="2.6.51.html"><small>Previous release</small><span>2.6.51</span></a>
+</nav>
+        </article>
+        </div>
+    </div>
+</main>
+
+<footer class="c-footer pt-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-start g-4">
+            <div class="text-center" style="width:20rem">
+                <img src="../microbot/logo.png" class="c-footer--logo" loading="lazy" alt="footer">
+                <div class="c-content-divider mt-3 mb-3"></div>
+                <ul class="d-flex align-items-center justify-content-center gap-4 m-auto text-center">
+                    <li>
+                        <a href="https://discord.gg/zaGrfqFEWE" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" viewBox="0 0 71 55"><title>logo
+                                discord</title>
+                                <g fill="none" class="nc-icon-wrapper">
+                                    <g clip-path="url(#clip0)">
+                                        <path d="M60.105 4.898A58.55 58.55 0 0 0 45.653.415a.22.22 0 0 0-.233.11 40.784 40.784 0 0 0-1.8 3.697c-5.456-.817-10.886-.817-16.23 0-.485-1.164-1.201-2.587-1.828-3.697a.228.228 0 0 0-.233-.11 58.386 58.386 0 0 0-14.451 4.483.207.207 0 0 0-.095.082C1.578 18.73-.944 32.144.293 45.39a.244.244 0 0 0 .093.167c6.073 4.46 11.955 7.167 17.729 8.962a.23.23 0 0 0 .249-.082 42.08 42.08 0 0 0 3.627-5.9.225.225 0 0 0-.123-.312 38.772 38.772 0 0 1-5.539-2.64.228.228 0 0 1-.022-.378c.372-.279.744-.569 1.1-.862a.22.22 0 0 1 .23-.03c11.619 5.304 24.198 5.304 35.68 0a.219.219 0 0 1 .233.027c.356.293.728.586 1.103.865a.228.228 0 0 1-.02.378 36.384 36.384 0 0 1-5.54 2.637.227.227 0 0 0-.121.315 47.249 47.249 0 0 0 3.624 5.897.225.225 0 0 0 .249.084c5.801-1.794 11.684-4.502 17.757-8.961a.228.228 0 0 0 .092-.164c1.48-15.315-2.48-28.618-10.497-40.412a.18.18 0 0 0-.093-.084zm-36.38 32.427c-3.497 0-6.38-3.211-6.38-7.156 0-3.944 2.827-7.156 6.38-7.156 3.583 0 6.438 3.24 6.382 7.156 0 3.945-2.827 7.156-6.381 7.156zm23.593 0c-3.498 0-6.38-3.211-6.38-7.156 0-3.944 2.826-7.156 6.38-7.156 3.582 0 6.437 3.24 6.38 7.156 0 3.945-2.798 7.156-6.38 7.156z"
+                                              fill="currentColor"></path>
+                                    </g>
+                                    <defs>
+                                        <clippath id="clip0">
+                                            <path fill="currentColor" d="M0 0h71v55H0z"></path>
+                                        </clippath>
+                                    </defs>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/chsami/microbot/releases" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" viewBox="0 0 16 16"><title>data
+                                download</title>
+                                <g fill="currentColor" class="nc-icon-wrapper">
+                                    <path d="M14,10a1,1,0,0,0-1,1v2H3V11a1,1,0,0,0-2,0v2a2,2,0,0,0,2,2H13a2,2,0,0,0,2-2V11A1,1,0,0,0,14,10Z"></path>
+                                    <path data-color="color-2"
+                                          d="M7.293,10.707a1,1,0,0,0,1.414,0l4-4a1,1,0,1,0-1.414-1.414L9,7.586V2A1,1,0,0,0,7,2V7.586L4.707,5.293A1,1,0,0,0,3.293,6.707Z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="c-footer-cc py-2 mt-5">
+        <div class="container">
+            <p class="text-center c-text-faded mb-0">Microbot © 2026. All Rights Reserved. - <a href="../privacy.html"
+                                                                                                target="_blank">Privacy
+                Policy</a> -
+                <a href="../terms.html"
+                   target="_blank">Terms of service</a></p>
+        </div>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('.rn-article img, .rn-article video').forEach(function (m) {
+        function hide() {
+            var box = m.closest('.rn-gallery') && m.closest('.rn-gallery').children.length > 1 ? m : (m.closest('figure') || m);
+            box.style.display = 'none';
+        }
+        if (m.tagName === 'IMG' && m.complete && m.naturalWidth === 0 && m.getAttribute('src')) hide();
+        m.addEventListener('error', hide);
+    });
+</script>
+</body>
+</html>

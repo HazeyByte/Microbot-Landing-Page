@@ -1,5 +1,13 @@
 const releases = [
     {
+        date: new Date('11/05/2026'), //MM/dd/YYYY
+        version: '2.6.53',
+        icon: 'images/releases/2.6.53/pause.png',
+        title: '2.6.53 Release - Pause every script with one click',
+        content: "A pause button that pauses every running script and gives you the mouse and keyboard, a Local Plugins window to add, update and remove plugin JARs without a restart, Quest Helper fixes for Semi-Auto and Cold War, bank trips that pick a bank you can walk to, login fixes, and Hub updates including the new Sulliuscep plugin, Auto Gauntlet, Barbarian Fisher, Thieving, Arceuus Library, Tempoross and Barrows.",
+        author: 'Microbot Team'
+    },
+    {
         date: new Date('11/03/2026'), //MM/dd/YYYY
         version: '2.6.51',
         icon: 'images/releases/2.6.51/skull.png',
