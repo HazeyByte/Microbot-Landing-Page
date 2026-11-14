@@ -1,5 +1,13 @@
 const releases = [
     {
+        date: new Date('11/14/2026'), //MM/dd/YYYY
+        version: '2.6.58',
+        icon: 'images/releases/2.6.58/quest.png',
+        title: '2.6.58 Release - Quest Helper and walker fixes, and Dro AIO Slayer',
+        content: "Quest Helper stops closing option menus mid-conversation and waits out cutscenes, the walker pays charter ship fares, uses the fairy ring next to you and stops casting the same teleport twice, the antiban natural mouse checkbox is renamed to Aim Clicks From Cursor and keeps your choice, and Hub updates including two new Dro plugins (AIO Slayer and Efficient Walker), a big Scurrius update, Slayer, Barrows, Moons of Peril, AIO Fighter, CG Prep, Motherlode Mine and 10 others.",
+        author: 'Microbot Team'
+    },
+    {
         date: new Date('11/12/2026'), //MM/dd/YYYY
         version: '2.6.57',
         icon: 'images/releases/2.6.57/mouse.png',
