@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Microbot 2.6.58 release notes</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Microbot 2.6.58: Quest Helper stops closing option menus and waits out cutscenes, the walker pays charter fares and stops double-casting teleports, two new Dro plugins (AIO Slayer and Efficient Walker), a big Scurrius update and fixes to 16 more Hub plugins.">
+    <link rel="canonical" href="https://microbot.cloud/releases/2.6.58.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Microbot">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Microbot 2.6.58 release notes">
+    <meta property="og:description" content="Microbot 2.6.58: Quest Helper stops closing option menus and waits out cutscenes, the walker pays charter fares and stops double-casting teleports, two new Dro plugins (AIO Slayer and Efficient Walker), a big Scurrius update and fixes to 16 more Hub plugins.">
+    <meta property="og:image" content="https://microbot.cloud/images/general/logo.png">
+    <meta property="og:url" content="https://microbot.cloud/releases/2.6.58.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Microbot 2.6.58 release notes">
+    <meta name="twitter:description" content="Microbot 2.6.58: Quest Helper stops closing option menus and waits out cutscenes, the walker pays charter fares and stops double-casting teleports, two new Dro plugins (AIO Slayer and Efficient Walker), a big Scurrius update and fixes to 16 more Hub plugins.">
+    <meta name="theme-color" content="#0e0e0e">
+    <link rel="stylesheet" href="../microbot/app.min.css" media="all">
+    <link rel="stylesheet" href="../microbot/341e4a57816af3ba440d891ca87450ff_framework.css.c1bcd9467a7eeb9006567801face652d.css" media="all">
+    <link rel="stylesheet" href="../microbot/20446cf2d164adcc029377cb04d43d17_flags.css.be60c469fe9d673f833faaa74a81e375.css" media="all">
+    <link rel="stylesheet" href="../microbot/90eb5adf50a8c640f633d47fd7eb1778_core.css.730a336650d62c3b59570edc9065b630.css" media="all">
+    <link rel="stylesheet" href="../microbot/5a0da001ccc2200dc5625c3f3934497d_core_responsive.css.1d08c9ed37ed1cae43d3985a3b2316ad.css" media="all">
+    <link rel="stylesheet" href="../microbot/releases/releases.css">
+</head>
+<body style="background-color:black !important;" class="rn-page ipsApp ipsApp_front ipsClearfix ipsJS_has ipsApp_noTouch">
+<header class="c-header">
+    <!-- Event Start -->
+    <div class="c-events-block py-2">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+            <div></div>
+            <a href="https://discord.gg/zaGrfqFEWE" target="_blank" rel="noreferrer noopener"
+               class="c-events-block__right d-flex flex-row align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" class="me-2" viewBox="0 0 71 55"><title>logo
+                    discord</title>
+                    <g fill="none" class="nc-icon-wrapper">
+                        <g clip-path="url(#clip0)">
+                            <path d="M60.105 4.898A58.55 58.55 0 0 0 45.653.415a.22.22 0 0 0-.233.11 40.784 40.784 0 0 0-1.8 3.697c-5.456-.817-10.886-.817-16.23 0-.485-1.164-1.201-2.587-1.828-3.697a.228.228 0 0 0-.233-.11 58.386 58.386 0 0 0-14.451 4.483.207.207 0 0 0-.095.082C1.578 18.73-.944 32.144.293 45.39a.244.244 0 0 0 .093.167c6.073 4.46 11.955 7.167 17.729 8.962a.23.23 0 0 0 .249-.082 42.08 42.08 0 0 0 3.627-5.9.225.225 0 0 0-.123-.312 38.772 38.772 0 0 1-5.539-2.64.228.228 0 0 1-.022-.378c.372-.279.744-.569 1.1-.862a.22.22 0 0 1 .23-.03c11.619 5.304 24.198 5.304 35.68 0a.219.219 0 0 1 .233.027c.356.293.728.586 1.103.865a.228.228 0 0 1-.02.378 36.384 36.384 0 0 1-5.54 2.637.227.227 0 0 0-.121.315 47.249 47.249 0 0 0 3.624 5.897.225.225 0 0 0 .249.084c5.801-1.794 11.684-4.502 17.757-8.961a.228.228 0 0 0 .092-.164c1.48-15.315-2.48-28.618-10.497-40.412a.18.18 0 0 0-.093-.084zm-36.38 32.427c-3.497 0-6.38-3.211-6.38-7.156 0-3.944 2.827-7.156 6.38-7.156 3.583 0 6.438 3.24 6.382 7.156 0 3.945-2.827 7.156-6.381 7.156zm23.593 0c-3.498 0-6.38-3.211-6.38-7.156 0-3.944 2.826-7.156 6.38-7.156 3.582 0 6.437 3.24 6.38 7.156 0 3.945-2.798 7.156-6.38 7.156z"
+                                  fill="currentColor"></path>
+                        </g>
+                        <defs>
+                            <clippath id="clip0">
+                                <path fill="currentColor" d="M0 0h71v55H0z"></path>
+                            </clippath>
+                        </defs>
+                    </g>
+                </svg>
+                <p class="mb-0">Join us on Discord</p>
+            </a>
+        </div>
+    </div>
+    <div class="c-border-red mb-2"></div>
+    <!-- Event End -->      <!-- Navigation Start -->
+    <nav class="c-nav navbar navbar-expand-sm py-2" style="flex-wrap:nowrap;justify-content: flex-start">
+        <div class="container align-items-stretch">
+            <a class="navbar-brand me-0 me-lg-3 me-xl-5" href="../index.html">
+                <img src="../microbot/logo.png" class="c-nav__logo" loading="lazy" alt="logo">
+            </a>
+            <div class="p-3 p-xl-0" style="line-height: 2rem;width: 100%;" id="navbarMenu">
+                <ul class="navbar-nav me-auto text-center text-xl-left gap-3 gap-xl-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.github.com/chsami/microbot" target="_blank">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://discord.gg/zaGrfqFEWE" target="_blank">Discord</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://chatgpt.com/g/g-LM0fGeeXB-microbot-documentation"
+                           target="_blank">ChatGPT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../releases.html">Releases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../plugins.html">Plugins</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul id="elMobileNav"
+                class="ipsList_inline ipsResponsive_hideDesktop ipsResponsive_block my-auto d-flex gx-2"
+                data-controller="core.front.core.mobileNav" data-default="all">
+
+                <li class="navbar-toggler my-auto py-3 position-relative" data-ipsdrawer=""
+                    data-ipsdrawer-drawerelem="#elMobileDrawer">
+                    <a href="#">
+                        <i class="fa fa-navicon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navigation End -->
+</header>
+
+<main>
+    <section class="rn-hero">
+        <div class="container">
+            <div>
+            <div class="rn-eyebrow">Release notes</div>
+            <h1>Microbot 2.6.58</h1>
+            <p class="rn-tagline">Quest Helper and the walker stop getting in their own way, plus Dro AIO Slayer</p>
+            <div class="rn-meta">
+                <span><strong>November 14, 2026</strong></span>
+                <span>by Microbot Team</span>
+            </div>
+            <div class="rn-actions">
+                <a class="c-button c-button--primary" href="../index.html">Download Microbot</a>
+                <a class="c-button" href="../releases.html">All releases</a>
+            </div>
+            </div>
+            <div class="rn-hero-art"><img class="rn-sprite" src="../images/releases/2.6.58/quest.png" alt=""></div>
+        </div>
+    </section>
+
+    <div class="rn-shell">
+        <div class="rn-layout">
+        <aside class="rn-toc" aria-label="In this release">
+            <div class="rn-toc-title">In this release</div>
+            <ol>
+                <li><a href="#quest-helper">Quest Helper conversations</a></li>
+                <li><a href="#walker">Walker and teleports</a></li>
+                <li><a href="#antiban">Antiban checkbox</a></li>
+                <li><a href="#client">Also in the client</a></li>
+                <li><a href="#new-plugins">Two new plugins</a></li>
+                <li><a href="#bossing">Bossing and combat</a></li>
+                <li><a href="#skilling">Skilling and minigames</a></li>
+                <li><a href="#developers">For script developers</a></li>
+                <li><a href="#update">How to update</a></li>
+            </ol>
+        </aside>
+        <article class="rn-article">
+            <details class="rn-toc-mobile">
+                <summary>In this release</summary>
+                <ol>
+                <li><a href="#quest-helper">Quest Helper conversations</a></li>
+                <li><a href="#walker">Walker and teleports</a></li>
+                <li><a href="#antiban">Antiban checkbox</a></li>
+                <li><a href="#client">Also in the client</a></li>
+                <li><a href="#new-plugins">Two new plugins</a></li>
+                <li><a href="#bossing">Bossing and combat</a></li>
+                <li><a href="#skilling">Skilling and minigames</a></li>
+                <li><a href="#developers">For script developers</a></li>
+                <li><a href="#update">How to update</a></li>
+                </ol>
+            </details>
+<p class="rn-lede">2.6.58 is mostly about two things you lean on every day: Quest Helper and the walker. Quest Helper stops closing option menus in the middle of a conversation and no longer walks off while a cutscene is still playing. The walker pays the charter ship fare, stops casting the same teleport twice, and takes the fairy ring next to you instead of a glider detour. In the antiban settings, "Use Natural Mouse" gets a name that says what it does, and scripts stop ticking it back on. On the Hub there are two new plugins from Dro, AIO Slayer and Efficient Walker, a big Scurrius update, and fixes to 16 more plugins.</p>
+<h2 id="quest-helper">Quest Helper finishes its conversations</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.58/quest.png"/>Four bug reports sent from inside the client, from Tai Bwo Wannai Trio, Troll Romance and Underground Pass, pointed at the same kind of problem: Quest Helper acted before the game was ready for it.</p>
+<div class="rn-compare">
+<div class="is-before">
+<div class="rn-compare-label">2.6.57</div>
+<p>In Troll Romance you talk to a quest NPC and an option menu opens. Quest Helper presses the right option, then clicks Walk here on your own tile before the game has answered. The conversation closes, it talks to the NPC again, and the same thing happens twice in 20 seconds.</p>
+</div>
+<div class="is-after">
+<div class="rn-compare-label">2.6.58</div>
+<p>After pressing an option, Quest Helper leaves the menu alone until the game has moved the conversation on. You see the dialogue advance once, and the quest continues.</p>
+</div>
+</div>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/quest.png"/></span><strong>Option menus it doesn't recognise stay open.</strong> In Tai Bwo Wannai Trio, talking to Lubufu, Zembo or Tiadeche opened a menu with no highlighted choice. Quest Helper clicked it away, talked again, and repeated that for minutes. Lubufu and Zembo now have their choices. For any other menu like this, it retries at most three times, showing "Quest helper: no matching dialogue option, retrying (n/3)", then leaves the menu open and pauses until you pick the option yourself. When you do, the status says "Quest helper: continuing".</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/quest.png"/></span><strong>Cutscenes are waited out.</strong> After the dialogue choice that starts the Tamayu hunt, the game moves you to a cutscene area. Quest Helper saw you far from the next step, started walking back and broke a Varrock teleport tablet while the cutscene was still playing. It now notices that a dialogue has just moved you a long way and holds still until you are back near the step, for up to 20 seconds after the last dialogue.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/walker.png"/></span><strong>No more walk to a tile nobody asked for.</strong> In Underground Pass, the area reloaded just as the script headed for the ledge crossing. It then walked to a sealed-off tile about 40 tiles away, and the route there began with a Varrock teleport out of the dungeon. After a reload, Quest Helper now looks the object up again instead of walking to its old position.</li>
+</ul>
+<h2 id="walker">The walker wastes fewer teleports</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.58/walker.png"/>Every script that travels uses the walker, so these fixes reach Quest Helper, Slayer, Mahogany Homes and anything else that calls it.</p>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/transport.png"/></span><strong>Charter ships: the fare gets paid.</strong> Sailing from Brimhaven to Musa Point, the walker picked the destination on the charter map and then waited for you to land, while the fare prompt sat unanswered on screen. After 12 seconds it clicked the crewmember again, every 16 to 18 seconds, until you answered the prompt by hand. It now answers the prompt and only then waits for the landing.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/fairy-ring.png"/></span><strong>Fairy rings on long trips underground.</strong> A walk from the Grand Exchange to the Kalphite Lair went by gnome glider, then down the Lumbridge castle cellar, and only later teleported back to the Grand Exchange for the fairy ring that was next to the starting point all along. Routes from the surface to an underground area can now use fairy rings from the start, and the walker picks the cheapest route it finds, not the first one.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/magic.png"/></span><strong>One cast per teleport.</strong> On a walk from Falador to Varrock, the walker cast Civitas illa Fortis Teleport, landed three tiles from the spot it expected, and cast the same spell again, spending a second set of runes. A teleport that lands a few tiles off now counts as landed.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/magic.png"/></span><strong>A refused home teleport is noticed.</strong> When the game refused the Lumbridge Home Teleport, your character stood still for up to 35 seconds with nothing in the log, and the next plan could pick the same teleport again. The walker now checks within 3 seconds whether the cast started, and if it didn't, takes another route.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/walker.png"/></span><strong>Worn Hunter cape teleport.</strong> With a Hunter cape(t) equipped, the walker tried a menu option the cape doesn't have, failed, and tried again every 4 to 5 seconds, 68 times in 5 minutes for one player. The cape teleport now works, and any teleport item that keeps failing is dropped from the route instead of being retried forever.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/attack.png"/></span><strong>Objects set into a wall get clicked.</strong> When the Gemstone Crab burrowed, Gem Crab Killer clicked Crawl-through on the cave, the game said "I can't reach that", and the recovery walk stopped two tiles short. After 3 to 5 tries every script was paused with the "tried to interact with an object" popup. If you are already standing within two tiles of the object, the click now goes through.</li>
+</ul>
+<h2 id="antiban">Antiban: a checkbox that says what it does</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.58/mouse.png"/>In the Antiban panel, on the Mouse tab, unticking "Use Natural Mouse" seemed to do nothing. The mouse kept moving in human-like paths, and the box was ticked again as soon as a script started.</p>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/mouse.png"/></span><strong>It is now called "Aim Clicks From Cursor".</strong> That is what the setting has controlled for a while: where clicks are aimed from, and whether scripts hover things before clicking. Human-like mouse movement was never controlled by it, is always on, and cannot be turned off. The tooltip explains both states.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/mouse.png"/></span><strong>Your choice is kept.</strong> Scripts no longer switch the box back on when they start. The Reset button in the panel still restores the default, which is on.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/prayer.png"/></span><strong>Scripts keep working during a fight.</strong> With Universal Antiban on, one player's Slayer script drank its potions on arrival and then did nothing for about three minutes. The character fought on auto retaliate only, and prayer drained from 53 to 6 with "Drink Prayer At" set to 18 and prayer potions in the inventory. An action cooldown had paused every script, and its countdown never moved while the character was in combat. A cooldown no longer holds your scripts for the length of a fight.</li>
+</ul>
+<h2 id="client">Also in the client</h2>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/microbot-hub.png"/></span><strong>Local Plugins remembers "Watch folder for changes".</strong> The box was unticked again after every client restart. Tick it once and the folder is watched the next time you start the client too. If the watch stops on a JAR it cannot load, the box unticks so what you see matches what is running.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/mouse.png"/></span><strong>Mouse Macro Recorder is now Input Recorder.</strong> Instead of writing files to your disk, it can upload your own mouse movement and game-key input to your Microbot account. It is limited to accounts that microbot.cloud has enabled, so for most players it does not show in the plugin list yet. It only records what you do by hand: it pauses while a script runs and for 30 seconds after any bot input, never records typed text, pauses while the bank PIN or a chat prompt is open, and leaves other players' names out.</li>
+</ul>
+<h2 id="new-plugins">Two new plugins from Dro</h2>
+<p>Search for "Dro" in the Microbot Hub tab. AIO Slayer needs Efficient Walker, so install and turn on both. If the walker is missing, AIO Slayer tells you to get it from the Hub and stops.</p>
+<div class="rn-plugin-list">
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/slayer.png"/></span><span>[Dro] AIO Slayer<span class="rn-plugin-version">1.3.95</span></span></div>
+<div class="rn-plugin-body"><p>By Big L and Dro. Runs Slayer from start to finish with any master from Turael to Krystilia. It gets tasks and can skip or block the ones on your lists once you have the points you set. In combat it uses per-monster gear, prayers and bracelets, kills superiors first, dodges area attacks and hops when someone crashes you. It sets up and refills a cannon, with optional cannonball buying at the Grand Exchange, banks, restores at your house pool and loots by value or by item list. Krystilia's Wilderness tasks have their own recovery settings, and the cannon stays off on Wilderness tasks unless you turn it on. The existing [BL] Slayer plugin is unchanged and keeps its own settings.</p></div>
+</div>
+<div class="rn-plugin">
+<div class="rn-plugin-name"><span class="rn-plugin-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/walker.png"/></span><span>[Dro] Efficient Walker<span class="rn-plugin-version">1.12.69</span></span></div>
+<div class="rn-plugin-body"><p>A walker that knows dungeons, originally created by RLitePlus and heavily rewritten by Dro. It routes with teleports, fairy rings, spirit trees, charter ships, gliders, canoes, quetzals, your house (including a maxed one) and dungeon entrances, limited to what your account has unlocked, and it withdraws the teleport items, runes and fares a route needs. A hotkey walks to the current Quest Helper step. Wilderness routes are off by default. With them on, it watches for players who can attack you and tries to log out.</p></div>
+</div>
+</div>
+<h2 id="bossing">Bossing and combat</h2>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/prayer.png"/></span><strong>Scurrius 1.1.7:</strong> a big update from 1.0.4. Dodging the falling rocks never actually worked, and now it does: the plugin steps to the nearest clear tile, preferring one it can still attack from. All six of Scurrius's attacks switch your prayer, where three were missed before. There are three prayer modes, Always on, Lazy flick (the default) and 1-tick flick. It no longer banks forever when your teleport tabs are in one stack, and no longer sits idle when only food or only potions run out. New: an emergency teleport at 2 or fewer food and under 50% HP, restock trips every 2 to 5 kills, breaks of 5 to 40 minutes, special attacks with an optional spec weapon, Inventory Setups, and an overlay with XP per hour and kills.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/slayer.png"/></span><strong>Slayer 1.1.9:</strong> in a single-combat area the script kept clicking Attack on a monster another player was fighting, and the game kept answering "Someone else is fighting that." It now skips monsters that are fighting someone else and picks a free one. Because it can finally see that every monster is taken, Hop When Crashed works there too.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/attack.png"/></span><strong>Barrows 2.5.28:</strong> on the way through the tunnels to the chest, the character stopped after almost every door to fight whatever was attacking it, even with "Aim for 86+% rewards potential" off. It often chose a monster behind a door, clicked Attack about every 1.7 seconds to "I'm already under attack." or "I can't reach that!", ate its food and teleported out without reaching the chest. One door took over three minutes. It now keeps walking unless a tunnel kill is still wanted, and drops a target the game refuses.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/strength.png"/></span><strong>Moons of Peril 1.0.11:</strong> three fixes for the Eclipse Moon. In the shield phase the lap around the arena started about 5 ticks after the knockback, too late to get behind the shield. It now starts right away. The clone phase checks once per game tick and no longer re-equips your gear on every check. In the main phase the plugin attacks from the sigil tile itself, not the tile next to it.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/prayer.png"/></span><strong>[Dro] Fire Cape 0.3.86:</strong> in Pure mode with mouse prayer switching, a late click could be counted as missed and pressed again. The second press turned Protect from Magic off just as a Ket-Zek hit landed, and one run drank all its brews and died around wave 37. Each prayer is now pressed once.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/prayer.png"/></span><strong>[Dro] Inferno Prayers 1.0.12:</strong> prayer timing updates. Magic or Range is up one tick before a Jal-Ak reads your prayer, whether it steps into view or you step out of cover. A Jal-ImKot walking towards you is prayed against earlier, and one that has just dug is ignored until it can swing again.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/magic.png"/></span><strong>AIO Fighter 2.2.16 and 2.2.17:</strong> with a centre tile and Attack Radius 1, drops were only picked up from the tile you stood on, and at larger radii drops on the edge of the fight area were left behind. The whole fight area is looted now. With a staff equipped and a skill that trains through defensive casting, the attack style switch failed about 3 times out of 4. It now switches to the style you picked.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/ranged.png"/></span><strong>CG Prep 1.8.4:</strong> with "Loot chest + go again" on, the bot looted the Reward Chest and walked back to the entrance with the loot still on it. The game answered "You cannot keep any items" and the run stalled in the lobby. It now banks everything you carry and wear at the lobby deposit box before every entry.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/attack.png"/></span><strong>Ammonite Crabs 1.1.8:</strong> auto retaliate did all the fighting, so the game saw no input from you. When the crabs stopped being aggressive, the idle logout arrived before the walk that resets them, and you came back to a logged-out account. The plugin now keeps the session active while it fights and resets aggro sooner.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/attack.png"/></span><strong>Giant Mole 0.0.8:</strong> no more error during a world hop, a region load or right around login, when the game briefly has no position for your character.</li>
+</ul>
+<h2 id="skilling">Skilling and minigames</h2>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/mining.png"/></span><strong>Motherlode Mine 1.9.14:</strong> with Anti Crash on, on a busy world, the script stood still for minutes after choosing its mining spot. Checking every vein against every nearby player was too slow. It now looks at the other players once per scan, so it picks a vein and starts mining straight away.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/agility.png"/></span><strong>MicroAgility 1.3.6:</strong> on the Shayzien Advanced course the script stopped after the second edge jump and the log repeated "No agility obstacle found." The second grapple was exactly one tile outside the distance it searched. It now finds the grapple and finishes the lap.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/construction.png"/></span><strong>Mahogany Homes 0.0.22:</strong> with "Use Plank Sack" on, the sack count stayed at "?", the script clicked Check on the sack every loop, and it walked to the bank after every contract. It only understood a reply starting with "Basic planks:", and the game answers per plank type, for example "Mahogany planks: 28". Every reply is read now, so it only banks when the sack and inventory can't cover the next contract.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/fishing.png"/></span><strong>Barb Village Fisher 1.0.2:</strong> on Drop Raw or Cook And Drop, the plugin dropped everything except the rod and the bait, including the tinderbox or tools you carried. It now drops only trout, salmon, pike and burnt fish. If the inventory is full with no fish in it, it stops with "Inventory is full and has no fish to drop."</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/fairy-ring.png"/></span><strong>Karambwans 1.2.3:</strong> with Fairy Ring Access set to "POH (Teleport)", the fisher teleported to your house and stood there without clicking the fairy ring. It was looking for the Zanaris ring instead of the one in a house, and it needed the ring's last destination to be DKP. It now finds the house ring, and it no longer stands idle in the house when travel fails.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/thieving.png"/></span><strong>Blackjack 1.1.32:</strong> if the plugin was enabled when the client started, before you logged in, with "Return camera zoom" left at 0, it failed to start at all. It now starts and reads the zoom once you are in the game.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.58/construction.png"/></span><strong>Vale Totems 1.0.16:</strong> a logout, world hop or loading screen no longer adds an unexplained entry to the red "Errors:" row on the overlay.</li>
+</ul>
+<h2 id="developers">For script developers</h2>
+<ul>
+<li><code>Rs2Inventory.combine</code> returns <code>false</code> when either item is missing from the inventory. It used to throw a <code>NullPointerException</code> and could leave the first item selected with the Use cursor active.</li>
+<li>A plugin can hide itself from the Microbot plugin list by implementing <code>ConditionallyListed</code> and posting <code>PluginListingChanged</code>.</li>
+<li>Script antiban templates in <code>AntibanSetupTemplates</code> no longer set <code>naturalMouse</code>, and <code>Rs2Antiban.resetAntibanSettings</code> re-reads the player's saved choice. If your script relied on a template turning it on, it now follows the player's setting.</li>
+<li>The "Watch folder for changes" choice is saved in the profile as <code>microbotPluginManager.watchFolder</code>. Safe mode neither saves nor restores it.</li>
+<li>Agent server: <code>GET /varbit</code> with an id that is not a varbit in the game is rejected. It used to throw on the client thread and answer 200 with value 0. A caller that goes away during a waited walk is treated as a disconnect and no longer logged as an error.</li>
+<li>[Dro] Efficient Walker exposes its walker to other scripts through <code>getWalker()</code> (<code>walkTo</code>, <code>getStatus</code>, <code>getPlanningFailure</code>, <code>cancel</code>). Its tests were updated for client 2.6.57.</li>
+<li>The 2.6.57 release was merged back into <code>development</code>, with no change for players. The launcher has no changes in this release.</li>
+</ul>
+<h2 id="update">How to update</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.58/microbot-hub.png"/>Restart Microbot to get client 2.6.58. The two new Dro plugins and the updated plugins show up in the Microbot Hub panel inside the client, and plugins you already have update from their row in the plugin list.</p>
+<p class="rn-credit">Game images © Jagex Ltd., via the <a href="https://oldschool.runescape.wiki" rel="noopener" target="_blank">Old School RuneScape Wiki</a>.</p>
+
+<nav class="rn-pager" aria-label="More releases">
+    <a class="rn-pager-prev" href="2.6.57.html"><small>Previous release</small><span>2.6.57</span></a>
+</nav>
+        </article>
+        </div>
+    </div>
+</main>
+
+<footer class="c-footer pt-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-start g-4">
+            <div class="text-center" style="width:20rem">
+                <img src="../microbot/logo.png" class="c-footer--logo" loading="lazy" alt="footer">
+                <div class="c-content-divider mt-3 mb-3"></div>
+                <ul class="d-flex align-items-center justify-content-center gap-4 m-auto text-center">
+                    <li>
+                        <a href="https://discord.gg/zaGrfqFEWE" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" viewBox="0 0 71 55"><title>logo
+                                discord</title>
+                                <g fill="none" class="nc-icon-wrapper">
+                                    <g clip-path="url(#clip0)">
+                                        <path d="M60.105 4.898A58.55 58.55 0 0 0 45.653.415a.22.22 0 0 0-.233.11 40.784 40.784 0 0 0-1.8 3.697c-5.456-.817-10.886-.817-16.23 0-.485-1.164-1.201-2.587-1.828-3.697a.228.228 0 0 0-.233-.11 58.386 58.386 0 0 0-14.451 4.483.207.207 0 0 0-.095.082C1.578 18.73-.944 32.144.293 45.39a.244.244 0 0 0 .093.167c6.073 4.46 11.955 7.167 17.729 8.962a.23.23 0 0 0 .249-.082 42.08 42.08 0 0 0 3.627-5.9.225.225 0 0 0-.123-.312 38.772 38.772 0 0 1-5.539-2.64.228.228 0 0 1-.022-.378c.372-.279.744-.569 1.1-.862a.22.22 0 0 1 .23-.03c11.619 5.304 24.198 5.304 35.68 0a.219.219 0 0 1 .233.027c.356.293.728.586 1.103.865a.228.228 0 0 1-.02.378 36.384 36.384 0 0 1-5.54 2.637.227.227 0 0 0-.121.315 47.249 47.249 0 0 0 3.624 5.897.225.225 0 0 0 .249.084c5.801-1.794 11.684-4.502 17.757-8.961a.228.228 0 0 0 .092-.164c1.48-15.315-2.48-28.618-10.497-40.412a.18.18 0 0 0-.093-.084zm-36.38 32.427c-3.497 0-6.38-3.211-6.38-7.156 0-3.944 2.827-7.156 6.38-7.156 3.583 0 6.438 3.24 6.382 7.156 0 3.945-2.827 7.156-6.381 7.156zm23.593 0c-3.498 0-6.38-3.211-6.38-7.156 0-3.944 2.826-7.156 6.38-7.156 3.582 0 6.437 3.24 6.38 7.156 0 3.945-2.798 7.156-6.38 7.156z"
+                                              fill="currentColor"></path>
+                                    </g>
+                                    <defs>
+                                        <clippath id="clip0">
+                                            <path fill="currentColor" d="M0 0h71v55H0z"></path>
+                                        </clippath>
+                                    </defs>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/chsami/microbot/releases" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" viewBox="0 0 16 16"><title>data
+                                download</title>
+                                <g fill="currentColor" class="nc-icon-wrapper">
+                                    <path d="M14,10a1,1,0,0,0-1,1v2H3V11a1,1,0,0,0-2,0v2a2,2,0,0,0,2,2H13a2,2,0,0,0,2-2V11A1,1,0,0,0,14,10Z"></path>
+                                    <path data-color="color-2"
+                                          d="M7.293,10.707a1,1,0,0,0,1.414,0l4-4a1,1,0,1,0-1.414-1.414L9,7.586V2A1,1,0,0,0,7,2V7.586L4.707,5.293A1,1,0,0,0,3.293,6.707Z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="c-footer-cc py-2 mt-5">
+        <div class="container">
+            <p class="text-center c-text-faded mb-0">Microbot © 2026. All Rights Reserved. - <a href="../privacy.html"
+                                                                                                target="_blank">Privacy
+                Policy</a> -
+                <a href="../terms.html"
+                   target="_blank">Terms of service</a></p>
+        </div>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('.rn-article img, .rn-article video').forEach(function (m) {
+        function hide() {
+            var box = m.closest('.rn-gallery') && m.closest('.rn-gallery').children.length > 1 ? m : (m.closest('figure') || m);
+            box.style.display = 'none';
+        }
+        if (m.tagName === 'IMG' && m.complete && m.naturalWidth === 0 && m.getAttribute('src')) hide();
+        m.addEventListener('error', hide);
+    });
+</script>
+</body>
+</html>
