@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Microbot 2.6.59 release notes</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Microbot 2.6.59: the client runs on RuneLite 1.13.7 and this week's game update, with RuneLite's hardcore main support in the world hopper, prices and hiscores, and a Spoof device ID that keeps working on the new game revision.">
+    <link rel="canonical" href="https://microbot.cloud/releases/2.6.59.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Microbot">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Microbot 2.6.59 release notes">
+    <meta property="og:description" content="Microbot 2.6.59: the client runs on RuneLite 1.13.7 and this week's game update, with RuneLite's hardcore main support in the world hopper, prices and hiscores, and a Spoof device ID that keeps working on the new game revision.">
+    <meta property="og:image" content="https://microbot.cloud/images/general/logo.png">
+    <meta property="og:url" content="https://microbot.cloud/releases/2.6.59.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Microbot 2.6.59 release notes">
+    <meta name="twitter:description" content="Microbot 2.6.59: the client runs on RuneLite 1.13.7 and this week's game update, with RuneLite's hardcore main support in the world hopper, prices and hiscores, and a Spoof device ID that keeps working on the new game revision.">
+    <meta name="theme-color" content="#0e0e0e">
+    <link rel="stylesheet" href="../microbot/app.min.css" media="all">
+    <link rel="stylesheet" href="../microbot/341e4a57816af3ba440d891ca87450ff_framework.css.c1bcd9467a7eeb9006567801face652d.css" media="all">
+    <link rel="stylesheet" href="../microbot/20446cf2d164adcc029377cb04d43d17_flags.css.be60c469fe9d673f833faaa74a81e375.css" media="all">
+    <link rel="stylesheet" href="../microbot/90eb5adf50a8c640f633d47fd7eb1778_core.css.730a336650d62c3b59570edc9065b630.css" media="all">
+    <link rel="stylesheet" href="../microbot/5a0da001ccc2200dc5625c3f3934497d_core_responsive.css.1d08c9ed37ed1cae43d3985a3b2316ad.css" media="all">
+    <link rel="stylesheet" href="../microbot/releases/releases.css">
+</head>
+<body style="background-color:black !important;" class="rn-page ipsApp ipsApp_front ipsClearfix ipsJS_has ipsApp_noTouch">
+<header class="c-header">
+    <!-- Event Start -->
+    <div class="c-events-block py-2">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+            <div></div>
+            <a href="https://discord.gg/zaGrfqFEWE" target="_blank" rel="noreferrer noopener"
+               class="c-events-block__right d-flex flex-row align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" class="me-2" viewBox="0 0 71 55"><title>logo
+                    discord</title>
+                    <g fill="none" class="nc-icon-wrapper">
+                        <g clip-path="url(#clip0)">
+                            <path d="M60.105 4.898A58.55 58.55 0 0 0 45.653.415a.22.22 0 0 0-.233.11 40.784 40.784 0 0 0-1.8 3.697c-5.456-.817-10.886-.817-16.23 0-.485-1.164-1.201-2.587-1.828-3.697a.228.228 0 0 0-.233-.11 58.386 58.386 0 0 0-14.451 4.483.207.207 0 0 0-.095.082C1.578 18.73-.944 32.144.293 45.39a.244.244 0 0 0 .093.167c6.073 4.46 11.955 7.167 17.729 8.962a.23.23 0 0 0 .249-.082 42.08 42.08 0 0 0 3.627-5.9.225.225 0 0 0-.123-.312 38.772 38.772 0 0 1-5.539-2.64.228.228 0 0 1-.022-.378c.372-.279.744-.569 1.1-.862a.22.22 0 0 1 .23-.03c11.619 5.304 24.198 5.304 35.68 0a.219.219 0 0 1 .233.027c.356.293.728.586 1.103.865a.228.228 0 0 1-.02.378 36.384 36.384 0 0 1-5.54 2.637.227.227 0 0 0-.121.315 47.249 47.249 0 0 0 3.624 5.897.225.225 0 0 0 .249.084c5.801-1.794 11.684-4.502 17.757-8.961a.228.228 0 0 0 .092-.164c1.48-15.315-2.48-28.618-10.497-40.412a.18.18 0 0 0-.093-.084zm-36.38 32.427c-3.497 0-6.38-3.211-6.38-7.156 0-3.944 2.827-7.156 6.38-7.156 3.583 0 6.438 3.24 6.382 7.156 0 3.945-2.827 7.156-6.381 7.156zm23.593 0c-3.498 0-6.38-3.211-6.38-7.156 0-3.944 2.826-7.156 6.38-7.156 3.582 0 6.437 3.24 6.38 7.156 0 3.945-2.798 7.156-6.38 7.156z"
+                                  fill="currentColor"></path>
+                        </g>
+                        <defs>
+                            <clippath id="clip0">
+                                <path fill="currentColor" d="M0 0h71v55H0z"></path>
+                            </clippath>
+                        </defs>
+                    </g>
+                </svg>
+                <p class="mb-0">Join us on Discord</p>
+            </a>
+        </div>
+    </div>
+    <div class="c-border-red mb-2"></div>
+    <!-- Event End -->      <!-- Navigation Start -->
+    <nav class="c-nav navbar navbar-expand-sm py-2" style="flex-wrap:nowrap;justify-content: flex-start">
+        <div class="container align-items-stretch">
+            <a class="navbar-brand me-0 me-lg-3 me-xl-5" href="../index.html">
+                <img src="../microbot/logo.png" class="c-nav__logo" loading="lazy" alt="logo">
+            </a>
+            <div class="p-3 p-xl-0" style="line-height: 2rem;width: 100%;" id="navbarMenu">
+                <ul class="navbar-nav me-auto text-center text-xl-left gap-3 gap-xl-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.github.com/chsami/microbot" target="_blank">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://discord.gg/zaGrfqFEWE" target="_blank">Discord</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://chatgpt.com/g/g-LM0fGeeXB-microbot-documentation"
+                           target="_blank">ChatGPT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../releases.html">Releases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../plugins.html">Plugins</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul id="elMobileNav"
+                class="ipsList_inline ipsResponsive_hideDesktop ipsResponsive_block my-auto d-flex gx-2"
+                data-controller="core.front.core.mobileNav" data-default="all">
+
+                <li class="navbar-toggler my-auto py-3 position-relative" data-ipsdrawer=""
+                    data-ipsdrawer-drawerelem="#elMobileDrawer">
+                    <a href="#">
+                        <i class="fa fa-navicon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navigation End -->
+</header>
+
+<main>
+    <section class="rn-hero">
+        <div class="container">
+            <div>
+            <div class="rn-eyebrow">Release notes</div>
+            <h1>Microbot 2.6.59</h1>
+            <p class="rn-tagline">Up to date with RuneLite 1.13.7 and this week's game update</p>
+            <div class="rn-meta">
+                <span><strong>November 18, 2026</strong></span>
+                <span>by Microbot Team</span>
+            </div>
+            <div class="rn-actions">
+                <a class="c-button c-button--primary" href="../index.html">Download Microbot</a>
+                <a class="c-button" href="../releases.html">All releases</a>
+            </div>
+            </div>
+            <div class="rn-hero-art"><img class="rn-sprite" src="../images/releases/2.6.59/login.png" alt=""></div>
+        </div>
+    </section>
+
+    <div class="rn-shell">
+        <div class="rn-layout">
+        <aside class="rn-toc" aria-label="In this release">
+            <div class="rn-toc-title">In this release</div>
+            <ol>
+                <li><a href="#game-update">Ready for this week's game update</a></li>
+                <li><a href="#hardcore-main">Hardcore main worlds</a></li>
+                <li><a href="#small-fixes">Small fixes from RuneLite</a></li>
+                <li><a href="#device-id">Spoof device ID</a></li>
+                <li><a href="#developers">For script developers</a></li>
+                <li><a href="#update">How to update</a></li>
+            </ol>
+        </aside>
+        <article class="rn-article">
+            <details class="rn-toc-mobile">
+                <summary>In this release</summary>
+                <ol>
+                <li><a href="#game-update">Ready for this week's game update</a></li>
+                <li><a href="#hardcore-main">Hardcore main worlds</a></li>
+                <li><a href="#small-fixes">Small fixes from RuneLite</a></li>
+                <li><a href="#device-id">Spoof device ID</a></li>
+                <li><a href="#developers">For script developers</a></li>
+                <li><a href="#update">How to update</a></li>
+                </ol>
+            </details>
+<p class="rn-lede">2.6.59 is a small release with one job: it moves Microbot to RuneLite 1.13.7, so the client matches the game after this week's update. There are no new Microbot features and no plugin changes in it. You get the new game content recognised by the client, RuneLite's support for hardcore main worlds, a few small RuneLite fixes, and a Spoof device ID option that keeps working on the new game revision.</p>
+<h2 id="game-update">Ready for this week's game update</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.59/login.png"/>Every game update changes the game's internals, and the client has to be rebuilt against them before it can be trusted again. 2.6.59 is that rebuild.</p>
+<ul>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.59/login.png"/></span><strong>Matches the current game.</strong> The client is built on RuneLite 1.13.7, which targets the game revision that went live this week.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.59/microbot-hub.png"/></span><strong>New content has names.</strong> Items, NPCs, objects, interfaces and quests added by the update are known to the client. For example, an item added this week shows up by name in item lists and in plugin settings instead of as an unknown ID.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.59/microbot-hub.png"/></span><strong>Your plugins carry on.</strong> The Hub plugins were compiled against this client before it shipped, and none of them needed a change.</li>
+</ul>
+<h2 id="hardcore-main">Hardcore main worlds</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.59/world-hopper.png"/>RuneLite 1.13.7 teaches three of its plugins about hardcore main worlds, and Microbot gets all three.</p>
+<ul>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.59/world-hopper.png"/></span><strong>World Hopper:</strong> the world type filter has a Hardcore main choice, so the world list can show only those worlds.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.59/microbot-hub.png"/></span><strong>Prices:</strong> while you are logged in to a hardcore main world, item prices in the client come from the hardcore main price list instead of the normal one. Anything that shows a value, such as the bank value or a loot tracker total, follows it.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.59/hiscore.png"/></span><strong>Hiscores:</strong> looking up a player who has the hardcore main icon next to their name in chat opens the hardcore main hiscores, both from the right-click Lookup option and from chat commands such as <code>!lvl</code>.</li>
+</ul>
+<h2 id="small-fixes">Small fixes from RuneLite</h2>
+<ul>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.59/configure.png"/></span><strong>Key Remapping:</strong> with WASD camera keys on, typing in the display name change box moved the camera instead of typing. The plugin now leaves your keys alone while that box is open.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.59/prayer.png"/></span><strong>Music:</strong> the option that mutes prayer sounds now also mutes Zeal.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.59/microbot-hub.png"/></span><strong>Clue Scrolls:</strong> the Lumbridge cipher clue and two clue texts that mention a sword, now a shortsword, are updated, so the helper recognises them again.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.59/microbot-hub.png"/></span><strong>Item values:</strong> the Obligator and Zorya's tome are valued by what they are made from.</li>
+</ul>
+<h2 id="device-id">Spoof device ID keeps working</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.59/configure.png"/>If you turned on Spoof device ID, the client keeps the game's own identity file out of the way while spoofing is on. This week's game revision changed the code around that file, and without a fix the client would have stopped guarding it. 2.6.59 recognises the new form, and a test that checks it against every past game revision ran before the release. If you never turned the option on, nothing changes for you.</p>
+<h2 id="developers">For script developers</h2>
+<ul>
+<li>RuneLite 1.13.7 adds <code>net.runelite.api.gameval.SoundEffectID</code> and <code>AmbientSoundID</code>, an <code>AmbientSoundComposition</code> type and the <code>AmbientSoundChanged</code> event. RuneLite's own plugins now use the gameval sound IDs.</li>
+<li><code>WorldType.HARDCORE_MAIN</code>, <code>IconID.HARDCORE_MAIN</code> and <code>ItemPrice.getWikiPriceHcm()</code> are available. <code>ItemManager</code> no longer falls back to the Grand Exchange guide price when the wiki price looks manipulated; it returns the wiki price for the world type you are on.</li>
+<li>The gameval classes (<code>ItemID</code>, <code>NpcID</code>, <code>ObjectID</code>, <code>InterfaceID</code>, <code>VarbitID</code>, <code>DBTableID</code> and others) are updated to the 2026-11-17 game data. The client and Hub <code>development</code> compile against them without changes.</li>
+<li>This release contains only the RuneLite update. Fixes already merged to <code>development</code> ship in the next release, and the launcher is unchanged.</li>
+</ul>
+<h2 id="update">How to update</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.59/microbot-hub.png"/>Restart Microbot through the launcher to get client 2.6.59. Your plugins and settings stay as they are.</p>
+
+<nav class="rn-pager" aria-label="More releases">
+    <a class="rn-pager-prev" href="2.6.58.html"><small>Previous release</small><span>2.6.58</span></a>
+</nav>
+        </article>
+        </div>
+    </div>
+</main>
+
+<footer class="c-footer pt-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-start g-4">
+            <div class="text-center" style="width:20rem">
+                <img src="../microbot/logo.png" class="c-footer--logo" loading="lazy" alt="footer">
+                <div class="c-content-divider mt-3 mb-3"></div>
+                <ul class="d-flex align-items-center justify-content-center gap-4 m-auto text-center">
+                    <li>
+                        <a href="https://discord.gg/zaGrfqFEWE" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" viewBox="0 0 71 55"><title>logo
+                                discord</title>
+                                <g fill="none" class="nc-icon-wrapper">
+                                    <g clip-path="url(#clip0)">
+                                        <path d="M60.105 4.898A58.55 58.55 0 0 0 45.653.415a.22.22 0 0 0-.233.11 40.784 40.784 0 0 0-1.8 3.697c-5.456-.817-10.886-.817-16.23 0-.485-1.164-1.201-2.587-1.828-3.697a.228.228 0 0 0-.233-.11 58.386 58.386 0 0 0-14.451 4.483.207.207 0 0 0-.095.082C1.578 18.73-.944 32.144.293 45.39a.244.244 0 0 0 .093.167c6.073 4.46 11.955 7.167 17.729 8.962a.23.23 0 0 0 .249-.082 42.08 42.08 0 0 0 3.627-5.9.225.225 0 0 0-.123-.312 38.772 38.772 0 0 1-5.539-2.64.228.228 0 0 1-.022-.378c.372-.279.744-.569 1.1-.862a.22.22 0 0 1 .23-.03c11.619 5.304 24.198 5.304 35.68 0a.219.219 0 0 1 .233.027c.356.293.728.586 1.103.865a.228.228 0 0 1-.02.378 36.384 36.384 0 0 1-5.54 2.637.227.227 0 0 0-.121.315 47.249 47.249 0 0 0 3.624 5.897.225.225 0 0 0 .249.084c5.801-1.794 11.684-4.502 17.757-8.961a.228.228 0 0 0 .092-.164c1.48-15.315-2.48-28.618-10.497-40.412a.18.18 0 0 0-.093-.084zm-36.38 32.427c-3.497 0-6.38-3.211-6.38-7.156 0-3.944 2.827-7.156 6.38-7.156 3.583 0 6.438 3.24 6.382 7.156 0 3.945-2.827 7.156-6.381 7.156zm23.593 0c-3.498 0-6.38-3.211-6.38-7.156 0-3.944 2.826-7.156 6.38-7.156 3.582 0 6.437 3.24 6.38 7.156 0 3.945-2.798 7.156-6.38 7.156z"
+                                              fill="currentColor"></path>
+                                    </g>
+                                    <defs>
+                                        <clippath id="clip0">
+                                            <path fill="currentColor" d="M0 0h71v55H0z"></path>
+                                        </clippath>
+                                    </defs>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/chsami/microbot/releases" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" viewBox="0 0 16 16"><title>data
+                                download</title>
+                                <g fill="currentColor" class="nc-icon-wrapper">
+                                    <path d="M14,10a1,1,0,0,0-1,1v2H3V11a1,1,0,0,0-2,0v2a2,2,0,0,0,2,2H13a2,2,0,0,0,2-2V11A1,1,0,0,0,14,10Z"></path>
+                                    <path data-color="color-2"
+                                          d="M7.293,10.707a1,1,0,0,0,1.414,0l4-4a1,1,0,1,0-1.414-1.414L9,7.586V2A1,1,0,0,0,7,2V7.586L4.707,5.293A1,1,0,0,0,3.293,6.707Z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="c-footer-cc py-2 mt-5">
+        <div class="container">
+            <p class="text-center c-text-faded mb-0">Microbot © 2026. All Rights Reserved. - <a href="../privacy.html"
+                                                                                                target="_blank">Privacy
+                Policy</a> -
+                <a href="../terms.html"
+                   target="_blank">Terms of service</a></p>
+        </div>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('.rn-article img, .rn-article video').forEach(function (m) {
+        function hide() {
+            var box = m.closest('.rn-gallery') && m.closest('.rn-gallery').children.length > 1 ? m : (m.closest('figure') || m);
+            box.style.display = 'none';
+        }
+        if (m.tagName === 'IMG' && m.complete && m.naturalWidth === 0 && m.getAttribute('src')) hide();
+        m.addEventListener('error', hide);
+    });
+</script>
+</body>
+</html>
