@@ -1,5 +1,13 @@
 const releases = [
     {
+        date: new Date('11/18/2026'), //MM/dd/YYYY
+        version: '2.6.59',
+        icon: 'images/releases/2.6.59/login.png',
+        title: "2.6.59 Release - Up to date with RuneLite 1.13.7 and this week's game update",
+        content: "The client moves to RuneLite 1.13.7 so it matches the game after this week's update: new items, NPCs and quests are recognised, the world hopper, prices and hiscores support hardcore main worlds, Key Remapping no longer hijacks the display name box, and Spoof device ID keeps working on the new game revision.",
+        author: 'Microbot Team'
+    },
+    {
         date: new Date('11/14/2026'), //MM/dd/YYYY
         version: '2.6.58',
         icon: 'images/releases/2.6.58/quest.png',
