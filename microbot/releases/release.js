@@ -1,5 +1,13 @@
 const releases = [
     {
+        date: new Date('11/20/2026'), //MM/dd/YYYY
+        version: '2.6.60',
+        icon: 'images/releases/2.6.60/walker.png',
+        title: '2.6.60 Release - Quest Helper says yes to quests, the walker stops standing still, and clicks stay off the interface',
+        content: "Quest Helper presses Yes on \"Start the ... quest?\" and picks up quest items from the floor, the walker no longer stalls after the Musa Point ship, stops clicking Keldagrim carts without a ticket and uses worn Morytania legs, clicks on targets behind the inventory, chat box or minimap stay off the interface, Break Handler V2 ends a break when you turn it off, and Hub fixes to 34 plugins including Vorkath, Tithe Farm, Auto Mining, NMZ, Barrows, AIO Fighter and Dro's Firecape and AIO Slayer.",
+        author: 'Microbot Team'
+    },
+    {
         date: new Date('11/18/2026'), //MM/dd/YYYY
         version: '2.6.59',
         icon: 'images/releases/2.6.59/login.png',
