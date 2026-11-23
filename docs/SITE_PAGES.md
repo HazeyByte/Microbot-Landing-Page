@@ -7,9 +7,8 @@ the Microbot Launcher's theme. New pages start from `docs/page-template.html` an
 
 | File | What | Used by |
 |---|---|---|
-| `microbot/mb-theme.css` | Tokens (launcher colours, fonts), base, header, footer, buttons, cards, chips, cookie banner, launcher mode | every page, Hub pages load it from themicrobot.com |
+| `microbot/mb-theme.css` | Tokens (launcher colours, fonts: Montserrat and Cinzel from Google Fonts, imported here, so pages add no font links), base, header, footer, buttons, cards, chips, cookie banner, launcher mode | every page, Hub pages load it from themicrobot.com |
 | `microbot/mb-site.js` | Menu toggle, cookie consent + Analytics, Releases NEW badge, launcher mode, `MB.*` helpers | every page |
-| `microbot/fonts/` | Self-hosted Montserrat and Cinzel, so no page calls Google before consent. Do not add font links to pages | `mb-theme.css` |
 | `microbot/mb-home.css`, `mb-plugins.css` | Page-only styles | index.html, plugins.html |
 | Hub: `_layouts/default.html`, `_includes/header.html`, `_includes/footer.html`, `assets/css/hub.css` | Plugin pages | Microbot-Hub `public/docs/` |
 
@@ -47,9 +46,9 @@ with `renderer.js`.
 ## Adding release notes
 
 Copy the newest page in `releases/` and replace its head metadata and `<main>`, then add the entry to
-`microbot/releases/release.js` and link the previous page's pager to it. A page on the old template still renders, because
-`releases.css` imports the tokens and the old stylesheets are kept, but it has the old header and footer. Remove both once
-release notes use the shared template.
+`microbot/releases/release.js` and `sitemap.xml`, and give the previous page's `rn-pager` an `rn-pager-next` link to it. Every release page uses the
+shared template. `releases.css` still imports the tokens and the old stylesheets are kept, so a page copied from an
+older one still renders (with the old header and footer) instead of breaking.
 
 ## Addresses
 
@@ -59,6 +58,7 @@ also need an entry in `sitemap.xml`.
 
 ## Adding a page
 
-1. Copy `docs/page-template.html` to the site root, set the title, description and `aria-current` on its nav item.
+1. Copy `docs/page-template.html` to the site root, set the title, description and `aria-current` on its nav item, and
+   replace `PAGE.html` in the canonical and `og:url` tags with the page's file name.
 2. Put page-only styles in `microbot/mb-<page>.css`; use the tokens (`var(--gold)` ...), never raw colours.
 3. Run `launcher-check.html?page=<file>` at both widths.

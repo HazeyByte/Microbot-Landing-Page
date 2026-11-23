@@ -21,13 +21,6 @@
       "statusCode": 404
     },
     {
-      "route": "/microbot/fonts/*",
-      "headers": {
-        "cache-control": "public, max-age=604800",
-        "access-control-allow-origin": "*"
-      }
-    },
-    {
       "route": "/images/*",
       "headers": {
         "cache-control": "public, max-age=604800"

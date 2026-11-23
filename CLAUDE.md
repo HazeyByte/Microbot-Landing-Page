@@ -43,6 +43,6 @@ This project uses Speckit for structured feature development. Available skills:
 
 - Conventional commits: `feat:`, `docs:`, `fix:`, `chore:`
 - Update `/docs/QUERYABLE_API.md` for API changes
-- Add release notes to `/releases/` directory: copy the newest page there and replace its head metadata and `<main>`, then add the release to `microbot/releases/release.js` and `sitemap.xml` (see `docs/SITE_PAGES.md`)
+- Add release notes to `/releases/` directory: copy the newest page there and replace its head metadata and `<main>`, then add the release to `microbot/releases/release.js` and `sitemap.xml`, and point the previous page's `rn-pager` at it with an `rn-pager-next` link (see `docs/SITE_PAGES.md`)
 - Site URLs (canonical, `og:`, `twitter:`, sitemap) use `https://www.themicrobot.com`; `microbot.cloud` serves only the API and dashboard, so site paths there return 404
 - Main branch: `master`

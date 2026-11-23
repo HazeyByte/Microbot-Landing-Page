@@ -7,9 +7,8 @@
  * <footer class="mb-footer">. Fonts: Montserrat for everything, Cinzel only for the MICROBOT wordmark.
  */
 
-/* Self-hosted so no visitor contacts Google before giving consent. Licences: fonts/*-OFL.txt */
-@font-face { font-family: Montserrat; font-weight: 400 800; font-display: swap; src: url(fonts/montserrat-latin.woff2) format('woff2'); }
-@font-face { font-family: Cinzel; font-weight: 700; font-display: swap; src: url(fonts/cinzel-latin.woff2) format('woff2'); }
+/* Google Fonts, as before this theme: no font files in the repo, and the full character sets keep non-Latin text readable */
+@import url(https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400..800&display=swap);
 :root {
   --bg: #0c0a08;
   --surface: #15110d;
