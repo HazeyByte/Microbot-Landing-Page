@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Microbot 2.6.60 release notes</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Microbot 2.6.60: Quest Helper accepts quest start prompts and picks up quest items, the walker stops stalling after the Musa Point ship and at Keldagrim carts, clicks stay off the inventory, Break Handler V2 breaks end when you turn it off, and Hub fixes for Vorkath, Tithe Farm, Auto Mining, NMZ and 30 more plugins.">
+    <link rel="canonical" href="https://microbot.cloud/releases/2.6.60.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Microbot">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Microbot 2.6.60 release notes">
+    <meta property="og:description" content="Microbot 2.6.60: Quest Helper accepts quest start prompts and picks up quest items, the walker stops stalling after the Musa Point ship and at Keldagrim carts, clicks stay off the inventory, Break Handler V2 breaks end when you turn it off, and Hub fixes for Vorkath, Tithe Farm, Auto Mining, NMZ and 30 more plugins.">
+    <meta property="og:image" content="https://microbot.cloud/images/general/logo.png">
+    <meta property="og:url" content="https://microbot.cloud/releases/2.6.60.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Microbot 2.6.60 release notes">
+    <meta name="twitter:description" content="Microbot 2.6.60: Quest Helper accepts quest start prompts and picks up quest items, the walker stops stalling after the Musa Point ship and at Keldagrim carts, clicks stay off the inventory, Break Handler V2 breaks end when you turn it off, and Hub fixes for Vorkath, Tithe Farm, Auto Mining, NMZ and 30 more plugins.">
+    <meta name="theme-color" content="#0e0e0e">
+    <link rel="stylesheet" href="../microbot/app.min.css" media="all">
+    <link rel="stylesheet" href="../microbot/341e4a57816af3ba440d891ca87450ff_framework.css.c1bcd9467a7eeb9006567801face652d.css" media="all">
+    <link rel="stylesheet" href="../microbot/20446cf2d164adcc029377cb04d43d17_flags.css.be60c469fe9d673f833faaa74a81e375.css" media="all">
+    <link rel="stylesheet" href="../microbot/90eb5adf50a8c640f633d47fd7eb1778_core.css.730a336650d62c3b59570edc9065b630.css" media="all">
+    <link rel="stylesheet" href="../microbot/5a0da001ccc2200dc5625c3f3934497d_core_responsive.css.1d08c9ed37ed1cae43d3985a3b2316ad.css" media="all">
+    <link rel="stylesheet" href="../microbot/releases/releases.css">
+</head>
+<body style="background-color:black !important;" class="rn-page ipsApp ipsApp_front ipsClearfix ipsJS_has ipsApp_noTouch">
+<header class="c-header">
+    <!-- Event Start -->
+    <div class="c-events-block py-2">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+            <div></div>
+            <a href="https://discord.gg/zaGrfqFEWE" target="_blank" rel="noreferrer noopener"
+               class="c-events-block__right d-flex flex-row align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" class="me-2" viewBox="0 0 71 55"><title>logo
+                    discord</title>
+                    <g fill="none" class="nc-icon-wrapper">
+                        <g clip-path="url(#clip0)">
+                            <path d="M60.105 4.898A58.55 58.55 0 0 0 45.653.415a.22.22 0 0 0-.233.11 40.784 40.784 0 0 0-1.8 3.697c-5.456-.817-10.886-.817-16.23 0-.485-1.164-1.201-2.587-1.828-3.697a.228.228 0 0 0-.233-.11 58.386 58.386 0 0 0-14.451 4.483.207.207 0 0 0-.095.082C1.578 18.73-.944 32.144.293 45.39a.244.244 0 0 0 .093.167c6.073 4.46 11.955 7.167 17.729 8.962a.23.23 0 0 0 .249-.082 42.08 42.08 0 0 0 3.627-5.9.225.225 0 0 0-.123-.312 38.772 38.772 0 0 1-5.539-2.64.228.228 0 0 1-.022-.378c.372-.279.744-.569 1.1-.862a.22.22 0 0 1 .23-.03c11.619 5.304 24.198 5.304 35.68 0a.219.219 0 0 1 .233.027c.356.293.728.586 1.103.865a.228.228 0 0 1-.02.378 36.384 36.384 0 0 1-5.54 2.637.227.227 0 0 0-.121.315 47.249 47.249 0 0 0 3.624 5.897.225.225 0 0 0 .249.084c5.801-1.794 11.684-4.502 17.757-8.961a.228.228 0 0 0 .092-.164c1.48-15.315-2.48-28.618-10.497-40.412a.18.18 0 0 0-.093-.084zm-36.38 32.427c-3.497 0-6.38-3.211-6.38-7.156 0-3.944 2.827-7.156 6.38-7.156 3.583 0 6.438 3.24 6.382 7.156 0 3.945-2.827 7.156-6.381 7.156zm23.593 0c-3.498 0-6.38-3.211-6.38-7.156 0-3.944 2.826-7.156 6.38-7.156 3.582 0 6.437 3.24 6.38 7.156 0 3.945-2.798 7.156-6.38 7.156z"
+                                  fill="currentColor"></path>
+                        </g>
+                        <defs>
+                            <clippath id="clip0">
+                                <path fill="currentColor" d="M0 0h71v55H0z"></path>
+                            </clippath>
+                        </defs>
+                    </g>
+                </svg>
+                <p class="mb-0">Join us on Discord</p>
+            </a>
+        </div>
+    </div>
+    <div class="c-border-red mb-2"></div>
+    <!-- Event End -->      <!-- Navigation Start -->
+    <nav class="c-nav navbar navbar-expand-sm py-2" style="flex-wrap:nowrap;justify-content: flex-start">
+        <div class="container align-items-stretch">
+            <a class="navbar-brand me-0 me-lg-3 me-xl-5" href="../index.html">
+                <img src="../microbot/logo.png" class="c-nav__logo" loading="lazy" alt="logo">
+            </a>
+            <div class="p-3 p-xl-0" style="line-height: 2rem;width: 100%;" id="navbarMenu">
+                <ul class="navbar-nav me-auto text-center text-xl-left gap-3 gap-xl-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.github.com/chsami/microbot" target="_blank">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://discord.gg/zaGrfqFEWE" target="_blank">Discord</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://chatgpt.com/g/g-LM0fGeeXB-microbot-documentation"
+                           target="_blank">ChatGPT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../releases.html">Releases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../plugins.html">Plugins</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul id="elMobileNav"
+                class="ipsList_inline ipsResponsive_hideDesktop ipsResponsive_block my-auto d-flex gx-2"
+                data-controller="core.front.core.mobileNav" data-default="all">
+
+                <li class="navbar-toggler my-auto py-3 position-relative" data-ipsdrawer=""
+                    data-ipsdrawer-drawerelem="#elMobileDrawer">
+                    <a href="#">
+                        <i class="fa fa-navicon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navigation End -->
+</header>
+
+<main>
+    <section class="rn-hero">
+        <div class="container">
+            <div>
+            <div class="rn-eyebrow">Release notes</div>
+            <h1>Microbot 2.6.60</h1>
+            <p class="rn-tagline">Quest Helper says yes to quests, the walker stops standing still, and clicks stay off the interface</p>
+            <div class="rn-meta">
+                <span><strong>November 20, 2026</strong></span>
+                <span>by Microbot Team</span>
+            </div>
+            <div class="rn-actions">
+                <a class="c-button c-button--primary" href="../index.html">Download Microbot</a>
+                <a class="c-button" href="../releases.html">All releases</a>
+            </div>
+            </div>
+            <div class="rn-hero-art"><img class="rn-sprite" src="../images/releases/2.6.60/walker.png" alt=""></div>
+        </div>
+    </section>
+
+    <div class="rn-shell">
+        <div class="rn-layout">
+        <aside class="rn-toc" aria-label="In this release">
+            <div class="rn-toc-title">In this release</div>
+            <ol>
+                <li><a href="#quest-helper">Quest Helper</a></li>
+                <li><a href="#walker">Walker and travel</a></li>
+                <li><a href="#clicks">Clicks behind the interface</a></li>
+                <li><a href="#breaks">Antiban and breaks</a></li>
+                <li><a href="#client">Also in the client</a></li>
+                <li><a href="#bossing">Hub: bossing and combat</a></li>
+                <li><a href="#skilling">Hub: skilling and minigames</a></li>
+                <li><a href="#utility">Hub: clues, shopping and more</a></li>
+                <li><a href="#developers">For script developers</a></li>
+                <li><a href="#update">How to update</a></li>
+            </ol>
+        </aside>
+        <article class="rn-article">
+            <details class="rn-toc-mobile">
+                <summary>In this release</summary>
+                <ol>
+                <li><a href="#quest-helper">Quest Helper</a></li>
+                <li><a href="#walker">Walker and travel</a></li>
+                <li><a href="#clicks">Clicks behind the interface</a></li>
+                <li><a href="#breaks">Antiban and breaks</a></li>
+                <li><a href="#client">Also in the client</a></li>
+                <li><a href="#bossing">Hub: bossing and combat</a></li>
+                <li><a href="#skilling">Hub: skilling and minigames</a></li>
+                <li><a href="#utility">Hub: clues, shopping and more</a></li>
+                <li><a href="#developers">For script developers</a></li>
+                <li><a href="#update">How to update</a></li>
+                </ol>
+            </details>
+<p class="rn-lede">2.6.60 is a week of fixes for moments where a script just stood there. Quest Helper now presses Yes on "Start the ... quest?" and picks up quest items from the floor instead of looking for a bank. The walker no longer waits 12 seconds on the Port Sarim dock, stops clicking Keldagrim carts without a ticket, and gets you off the Mort Myre rope bridge. Clicks on an NPC or object behind your inventory no longer land on the inventory. Break Handler V2 lets you end a break by turning it off, and a full inventory no longer freezes the antiban cooldown. On the Hub, 34 plugins were updated, among them Vorkath, Tithe Farm, Auto Mining, NMZ, Barrows and [Dro] Firecape.</p>
+<h2 id="quest-helper">Quest Helper takes the quest and picks it up</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.60/quest.png"/>Two bug reports sent from inside the client showed Quest Helper going around in circles at the start of a quest and in the middle of one.</p>
+<div class="rn-compare">
+<div class="is-before">
+<div class="rn-compare-label">2.6.59</div>
+<p>You start Family Crest. Quest Helper talks to Dimintheis and the game asks "Start the Family Crest quest?" with Yes and No. Quest Helper doesn't recognise that question, closes it with a Walk here click and talks to Dimintheis again. The status flips between "retrying (1/3)" and "continuing" for as long as you let it.</p>
+</div>
+<div class="is-after">
+<div class="rn-compare-label">2.6.60</div>
+<p>Quest Helper presses Yes and the quest starts. This works for every quest that asks "Start the &lt;quest&gt; quest?", not only Family Crest.</p>
+</div>
+</div>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/quest.png"/></span><strong>The retry limit really stops at three.</strong> Each round of a looping conversation used to reset the counter, so it never got past 1/3. Now a conversation that keeps ending in a menu Quest Helper can't answer reaches 3/3 and pauses, so you can pick the option yourself.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/quest.png"/></span><strong>Quest items on the floor get picked up.</strong> In Ernest the Chicken with "obtain missing items" on, Quest Helper reached the Fish food and the Poison inside Draynor Manor and went looking for a bank to get them from. The manor doors only open one way, so it clicked the doors over and over while the item lay at its feet. It now picks up an item that belongs to the current step when it lies near the step.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/bank.png"/></span><strong>A clear stop when no bank can be reached.</strong> If the item isn't on the ground yet, the status shows "Looking for &lt;item&gt; nearby (no bank reachable from here)" for up to 3 minutes, then Quest Helper stops and tells you to wait for the respawn, hop worlds or fetch the item yourself. On other steps it stops after about 15 seconds and names the missing items.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/quest.png"/></span><strong>Stopping right after a quest starts.</strong> Turning Quest Helper off, or closing a quest in its panel, just as a quest was starting could put an error in the log. That no longer happens.</li>
+</ul>
+<h2 id="walker">Walker and travel</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.60/walker.png"/>These fixes reach every script that travels: Quest Helper, Auto Fishing, Slayer and anything else that uses the walker.</p>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/ship.png"/></span><strong>No 12-second wait after the Musa Point ship.</strong> Fishing lobsters on Karamja and banking on the mainland, the walker clicked Travel on the Customs officer, landed on the Port Sarim dock and then stood still for about 12 seconds. The chat box showed "terminal travel destination dialogue did not appear" before the walk carried on to the bank. The walker now knows the ship lands you on the dock and walks on straight away, in both directions.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/minecart-ticket.png"/></span><strong>Keldagrim train carts need a ticket.</strong> The walker routed through the Keldagrim train station because you had coins, clicked Ride on a cart, and the game answered "You don't have an appropriate ticket for these carts". About 12 seconds later it clicked the cart again. The carts between Keldagrim and Ice Mountain or White Wolf Mountain are now only used when you carry the ticket for that trip. Without one, the walker takes another route. It doesn't buy tickets for you, and the free Grand Exchange carts are unchanged.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/transport.png"/></span><strong>Off the Mort Myre rope bridge.</strong> In In Search of the Myreque, after you repair all three parts of the bridge you end up on its last tile. From there the walker found no way to Curpile Fyod on the north bank and your character stood still until you clicked Cross-bridge yourself. It now crosses and walks on.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/morytania-legs.png"/></span><strong>Worn Morytania legs teleport.</strong> With the legs equipped, the walker looked for a "Burgh Teleport" or "Ecto Teleport" option, but worn legs call them "Burgh de Rott" and "Ectofuntus Pit". The teleport failed with an error in the log, and the next plan could pick it again. Both teleports now work while you wear the legs.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/walker.png"/></span><strong>Fewer pathfinding errors.</strong> Three rare errors could cut a walk or a script loop short: two parts of the client refreshing the walker settings at the same moment, the pathfinder reading its transport list while it was being rebuilt, and a path tile disappearing during a region load, which hit AIO Fighter. Each one now just leads to a fresh path on the next try, without an error.</li>
+</ul>
+<h2 id="clicks">Clicks stay off the inventory, chat box and minimap</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.60/mouse.png"/>A player in Discord noticed the mouse heading for an NPC or object that was drawn behind the inventory panel, and then clicking on the panel instead. In a small resizable window with the inventory open, a banker or a rock behind the panel could end up as a click on your inventory.</p>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/mouse.png"/></span><strong>Only the visible part is clicked.</strong> When an NPC, player, object or ground item is partly behind the side panel, chat box or minimap, the click goes to the part you can see.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/mouse.png"/></span><strong>Fully hidden targets turn the camera.</strong> If the whole target is covered, the client turns the camera once. If it is still covered, nothing is clicked and the chat box tells you which target is hidden, and that zooming out or moving the camera helps. That message shows at most once every 10 seconds.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/mouse.png"/></span><strong>Hovers too.</strong> Scripts that hover over a target before clicking skip the hover when the target is hidden, instead of moving the mouse onto the panel.</li>
+</ul>
+<h2 id="breaks">Antiban and breaks</h2>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/cooldown.png"/></span><strong>A full inventory no longer freezes the action cooldown.</strong> With Universal Antiban on, Herb runner stopped at a herb patch once the inventory was full and never moved again. The cooldown paused your scripts and its countdown waited for the inventory to empty, which a paused script can't do. For Farming, Prayer and Construction the countdown now runs as soon as your character stops animating, so the script carries on.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/break.png"/></span><strong>Break Handler V2: turning it off ends the break.</strong> Once a break was saved, nothing ended it. Restarting the client, turning the plugin off and on, even reinstalling: every start brought the break back and logged you out until the old timer ran out. Turning Break Handler V2 off now ends the break. Closing the client still keeps it, so a break survives a restart or crash as before.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/break.png"/></span><strong>A resumed break keeps its end time.</strong> If you had logged in by hand while a break was saved, the plugin logged you out again with a new break of random length, counted it as another break and sent a second break notification. It now resumes the saved break with its original end time, and nothing is counted or announced twice.</li>
+</ul>
+<h2 id="client">Also in the client</h2>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/world-hopper.png"/></span><strong>World hopping keeps working.</strong> When a shop ran out of stock, Bank's Shopper tried to hop and every hop for the rest of the session was refused with "Quick hop target world is not null". Restarting the plugin didn't help. A hop that was cut short is now cleared, so the next hop goes through.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/magic.png"/></span><strong>Superheat Item gets cast.</strong> In AIO Magic on Superheat, the script withdrew the ores, closed the bank and stood still. A chat line such as "You need to cast superheat item on ore." was mistaken for the spell. The client now looks for spells only in the spellbook. When a cast still can't happen, the log says why: the magic tab didn't open, the spell isn't visible because of your spellbook or its filters, or you are missing the level, a nature rune or 4 fire runes (or a fire staff).</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/bank.png"/></span><strong>Bank scrolling in the potion store view.</strong> A script that scrolled to a bank tab while the bank showed a view that isn't an item tab, such as the potion store, crashed its loop. It now skips the scroll.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/profile.png"/></span><strong>Importing a profile that isn't there.</strong> Clicking Import in the profile panel and typing a file name that doesn't exist created an empty "Imported Profile" anyway. Now you get a message that the file does not exist or can't be read, so no profile was imported, and that you can click Import again and choose an existing .properties file. Empty profiles left over from before can be deleted by hand.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/wilderness.png"/></span><strong>Wilderness checks during a loading screen.</strong> For a few ticks during login, loading, world hops and death the client has no position for you. A PK check in a Wilderness script could crash its loop right then. You now count as outside the Wilderness for those ticks, and nearby players without a position are skipped.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/discord.png"/></span><strong>Input Recorder names what you were doing.</strong> Recording sessions are split by RuneLite's own Discord activity: the boss, minigame, raid or dungeon you are in, otherwise "Training: &lt;skill&gt;", otherwise the city or region. A Tithe Farm run from 17:00 to 17:20 followed by four minutes on farming patches elsewhere becomes "Tithe Farm" and then "Training: Farming". Monster names are no longer recorded, and the overlay says Activity instead of Doing. Input Recorder is still limited to accounts that microbot.cloud has enabled.</li>
+</ul>
+<h2 id="bossing">Hub: bossing and combat</h2>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/magic.png"/></span><strong>Vorkath 1.3.15:</strong> when the Zombified Spawn appeared, the script selected Crumble Undead again and again but never clicked the spawn, ate while Vorkath kept attacking, and died to a firebomb. It now casts on the spawn, and if a cast fails the log names the spell, level and runes it needs. After a death it stops fighting and walks back to Torfinn for your items instead of heading to a bank.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/prayer.png"/></span><strong>[Dro] Firecape 0.3.87 and 0.3.88:</strong> with Fight input on Natural mouse (the default), the 1-tick flick of Protect from Melee against Yt-MejKot took two presses about 300 ms apart, and the second often landed a tick late, so the melee hit went through. Protection prayers are now held on with Natural mouse, which uses a bit more Prayer. With base Magic close to your spell's level, one Saradomin brew dose could drop you below Blood Burst or Ice Burst. The script now switches back to your main weapon and drinks a super restore first, unless your health is critical.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/prayer.png"/></span><strong>[Dro] Colosseum Prayers 1.0.101 and [Dro] Inferno Prayers:</strong> protection prayers stay up across attack cycles and prayer switches instead of being flicked off in between, and offensive prayers are still flicked on attack ticks. In the Colosseum the prayers are released between waves, so they don't get in the way while you pick a modifier. Inferno Prayers kept its version number, 1.0.12, so if you already have it the Hub may not offer an update: these changes reach you on a fresh install, and come to existing installs with its next version.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/slayer.png"/></span><strong>[Dro] AIO Slayer 1.3.96 and 1.3.97:</strong> on a Trolls task at Death Plateau, the script travelled to the task, went back to the bank for prayer potions, loaded an inventory setup that has none, and did it all again without fighting. It now banks for prayer only up to what your setup carries and tells you when the setup holds fewer doses than your threshold. Clicking Save in "Edit monster config" after the plugin had updated shows "Changes not saved" and asks you to open the window again, instead of an error.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/slayer.png"/></span><strong>Slayer 1.1.10:</strong> on a Black Dragons task, antifire was only renewed if your slayer profile had the antifire flag. Without it, the first dose wore off and you were burnt to death with antifire potions in the inventory. Dragon tasks now renew antifire whenever you carry it. If you get burnt with none left, the script goes to the bank to restock, and if it still has no protection it stops there and tells you what to add to the setup.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/attack.png"/></span><strong>Barrows 2.5.29:</strong> after the tunnel brother at the chest, the script kept clicking Open on a chest that was already open and only offered Search. It now searches it and the run continues.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/attack.png"/></span><strong>AIO Fighter 2.2.18 and 2.2.19:</strong> with Force Loot off, drops were only picked up after about 8 to 9 seconds with no monster in range, so on a busy spot they piled up. Loot is now picked up between kills. An Attack Radius set to a huge number such as 2147483647 stopped all looting; anything above 104, the size of the loaded area, now counts as 104.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/strength.png"/></span><strong>Moons of Peril 1.0.12:</strong> after a resupply the inventory was full with bream plus the supply crate's Knife and Big fishing net, so a two-handed boss weapon could not be wielded and you walked in with the wrong weapon. The net and knife are dropped after cooking.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/wilderness.png"/></span><strong>Revenant Killer 2.0.15:</strong> fleeing from a PKer during a teleport or loading screen could crash the escape halfway. The flee now carries on with your last known position, and if it can't read your position it starts the escape again a moment later instead of running to Ferox on foot.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/rock-cake.png"/></span><strong>Nmz 2.4.7 and 2.4.8:</strong> with overloads set in the config but none in the inventory, the rock cake was never used and Hitpoints stayed high through an absorption-only dream. Now it is. Restocking in the lobby no longer stalls: purchases are counted in doses, both potion targets must be met before you enter, and after three failed attempts the plugin says whether points, inventory space or prayer supplies are missing. A new Repeat rounds setting enters the previous dream again after a round, and it starts from your current Stop after death choice.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/attack.png"/></span><strong>ShadesKiller 1.0.3:</strong> "Use Coffin?" is on by default, and without a coffin the script opened and closed the bank forever. That loop is gone, as is the one where the bank ran short of food or teleports: after three tries it stops and names the missing supply. Teleporting with a stack of tablets no longer breaks one tablet after another before it starts walking.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/ranged.png"/></span><strong>Auto Gauntlet (CG Prep) 1.8.5:</strong> the lobby deposit now only happens when the bag is nearly full or the game refused entry, instead of before every run. On the last trip it fishes or picks up paddlefish until the target when there's time, and it drops the pestle and mortar as soon as every brew has its dust.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/attack.png"/></span><strong>SandCrabs 1.5.9:</strong> the aggro reset no longer throws an error now and then and cuts the loop short.</li>
+</ul>
+<h2 id="skilling">Hub: skilling and minigames</h2>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/farming.png"/></span><strong>Tithe Farm 1.1.22:</strong> the bot walked back and forth along the lane, picking a new plant on every loop. It now works through the lane in patch order, waits at the next patch when it hasn't grown yet, and only leaves for a dry plant that would die within 10 seconds. It answers Farmer Gricoller's "I'm an expert" question, which left new players waiting at the door, waters a fresh seedling with its Water option, and empties fruit into the sack between rounds. Randomize keeps one lane for the whole run.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/farming.png"/></span><strong>Herb runner 1.2.4:</strong> at a fully grown allotment the runner tried "Pick", which allotments don't have, and stood still until you harvested by hand. It now clicks Harvest.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/mining.png"/></span><strong>Auto Mining 1.0.19 and 1.0.20:</strong> in Progressive mode, once the nearest rocks were mined out, the bot clicked a rock a few tiles away and then walked back to the mine's centre before it could swing. It now stays where it mines. In the underground gem mine and with a clay bracelet, a pickaxe carried in the inventory was deposited with the ore and the bot clicked rocks forever. Your pickaxe now stays. Started with no matching rock nearby, it tells you in chat to stand next to the rocks or turn on Progressive mode, instead of idling.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/crafting.png"/></span><strong>Jewelry Crafter 1.0.5 and 1.0.6:</strong> making gold bracelets at Edgeville, the script clicked the furnace and Make again between items, about 40 furnace clicks for 27 bracelets. It now lets Make-All finish the whole inventory. With completion action ALCH and a fire staff worn, it no longer deposits and withdraws the same bars at the bank forever.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/crafting.png"/></span><strong>Crafting 1.0.9:</strong> with gem cutting on Ruby and "fletch into bolt tips" on, a player with low Crafting and 82 Fletching couldn't start the script at all. It now fletches the cut rubies from your bank and tells you uncut ones are skipped.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/magic.png"/></span><strong>Glass Make 1.0.2:</strong> in Giant seaweed mode with 10 buckets of sand left the script kept withdrawing seaweed and looping, and without astral runes it failed the cast forever. It now notices both and notifies you. Pressing Stop while the bank opens no longer leaves a thread running that slows the client.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/smithing.png"/></span><strong>BlastoiseFurnace 1.2.7 and 1.2.8:</strong> when the conveyor belt asked a question after Put-ore-on, the ore never went on the belt and the script went back to the bank over and over. It now answers Yes, and after three failed trips it logs out and says why. When the Bar dispenser holds bars but doesn't offer Take yet, it waits up to 2 minutes instead of giving up.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/fishing.png"/></span><strong>Auto Fishing 1.0.15:</strong> cage-fishing lobsters on Karamja with "Use bank" on, the script teleported home to Lumbridge every time the spell was ready and walked to the top floor of the castle. It now deposits at the closest bank or deposit box it can walk to, here the Port Sarim deposit box, and keeps your coins for the ship fare. With a fish barrel it uses banks only.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/runecraft.png"/></span><strong>Auto Runecrafter 1.0.2:</strong> after crafting, it teleported to Lumbridge to bank and walked all the way back, about 300 tiles for the Body Altar. Each altar now has its own bank: the Fire Altar uses Emir's Arena for members and Al Kharid on free worlds, and the Nature Altar uses Shilo Village once you've done the quest.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/sailing.png"/></span><strong>Sailing 2.2.62 and 2.2.63:</strong> salvaging at sea on a boat without its own salvaging station, the script tried to teleport to the port station when the inventory filled, which the game refuses at sea. It now drops what is on your Drop items list. Barracuda Trials with Target Rank on Unranked and Auto Navigate on used to do nothing. The plugin now stops and tells you that only Swordfish, Shark and Marlin have routes.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/jug-of-wine.png"/></span><strong>Blackjack 1.1.33:</strong> with Heal to 75 and 57 Hitpoints, the script kept drinking a Jug of wine every 3 ticks at full health until the wine was gone. The heal target is now capped at your Hitpoints level, and the setting is labelled "Heal below HP".</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/cooking.png"/></span><strong>The Mess 1.1.3:</strong> instead of stopping with "FAIL: batch invariant", the plugin drops the extra items, for example "dropping 1 extra Bowl of water (15 in inventory, 14 allowed)", and carries on.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/hunter.png"/></span><strong>Salamanders 1.1.1:</strong> a net trap that didn't catch anything was left in a failed state and still counted toward your trap limit, so the script stopped setting traps. Failed traps are now reset.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/hunter.png"/></span><strong>MoonlightMoth 1.0.2:</strong> at the Hunters' Guild bank chest the script opened and closed the bank forever even with a net equipped. It now recognises the net, wears one from the inventory or bank, and stops with a message if you have none.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/firemaking.png"/></span><strong>AI Firemaking 1.0.1:</strong> no more error line on every tick during a loading screen.</li>
+</ul>
+<h2 id="utility">Hub: clues, shopping and more</h2>
+<ul class="rn-iconlist">
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/clue.png"/></span><strong>Clue Solver 1.0.12:</strong> a beginner map clue did nothing, and the overlay button said Stop while the solver wasn't running. Beginner map clues are solved now, the button always matches the solver, and a clue type it can't handle tells you to solve it yourself. The setting is now called "Run solver" and does the same as the Start/Stop button. If you had it ticked, the solver starts as soon as the plugin is on.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/mining.png"/></span><strong>ShootingStar 1.4.13:</strong> picking a star in the panel, or having one still selected, and then starting the plugin threw an error on every tick and the script never went anywhere. It now goes to the star you picked.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/microbot-hub.png"/></span><strong>GE Buyer 1.0.1:</strong> with "Buy Quest Items" ticked and no quest selected in Quest Helper, it placed real offers for your manual Buy List. It now stops with a message instead. A Grand Exchange that fails to open no longer marks items as "Could not buy"; after five failed opens it stops.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/attack.png"/></span><strong>Tutorial Island 1.3.19:</strong> the script got stuck at the Combat Instructor because the game now calls the item a Bronze shortsword. It finds the sword again and closes the quest complete scroll at the end.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/thieving.png"/></span><strong>[Dro] Elf Thieving 1.0.5:</strong> no error and no extra Pickpocket click when you stop the script.</li>
+<li><span class="rn-li-icon"><img alt="" class="rn-sprite" src="../images/releases/2.6.60/microbot-hub.png"/></span><strong>Dro's plugins:</strong> [Dro] AIO Slayer and [Dro] Efficient Walker now list droplugins as their author, and [Dro] Firecape has a new card and icon in the Hub.</li>
+</ul>
+<h2 id="developers">For script developers</h2>
+<ul>
+<li>Clicks on NPCs, players, ground items and tile objects use <code>Rs2UiHelper.clearClickArea</code>, and hovers use <code>clearHoverArea</code>. When the target is still covered by the side panel, chat box or minimap after one camera turn, the call returns <code>false</code> without clicking. A target wholly outside the viewport now behaves the same way.</li>
+<li><code>PathfinderConfig.tryRefresh()</code> returns <code>false</code> on the client thread when another refresh is running. <code>refresh()</code> keeps its signature. <code>PrimitiveIntHashMap</code> is safe for concurrent readers.</li>
+<li><code>Rs2WorldPoint.pathTo</code> returns <code>null</code> when a path tile went stale during a scene change, and <code>distanceToPath</code> returns <code>Integer.MAX_VALUE</code>. <code>Rs2Pvp.getWildernessLevelFrom(null)</code> returns 0.</li>
+<li><code>Rs2Magic.superHeat</code>, <code>quickCast</code> and <code>quickCanCast</code> look the spell up inside the spellbook only. <code>Rs2Bank.scrollBankToSlot</code> returns <code>false</code> when the bank view is not an item tab.</li>
+<li><code>Rs2Dialogue.acceptQuestStartDialogue</code> accepts "Start the &lt;quest&gt; quest?". Stopping a quest from outside the client thread is now queued onto it, so <code>getSelectedQuest()</code> can return the old quest for one frame.</li>
+<li>Transport data: the Keldagrim train cart rows in <code>minecarts.tsv</code> require the destination ticket item, the Port Sarim and Musa Point ships land on the dock (plane 0), and Mort Myre has a Cross-bridge row from the last bridge tile.</li>
+<li>Fixes merged into <code>development</code> after this release, such as picking the nearest bank by the teleports you can use right now, ship in the next release.</li>
+</ul>
+<h2 id="update">How to update</h2>
+<p><img alt="" class="rn-sprite rn-inline-icon" src="../images/releases/2.6.60/microbot-hub.png"/>Restart Microbot to get client 2.6.60. The plugin updates went out on the Hub on November 21. Plugins you already have update from their row in the Microbot Hub panel, except [Dro] Inferno Prayers, which kept its version number (see above). Your settings stay as they are.</p>
+<p class="rn-credit">Game images © Jagex Ltd., via the <a href="https://oldschool.runescape.wiki" rel="noopener" target="_blank">Old School RuneScape Wiki</a>.</p>
+
+<nav class="rn-pager" aria-label="More releases">
+    <a class="rn-pager-prev" href="2.6.59.html"><small>Previous release</small><span>2.6.59</span></a>
+</nav>
+        </article>
+        </div>
+    </div>
+</main>
+
+<footer class="c-footer pt-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-start g-4">
+            <div class="text-center" style="width:20rem">
+                <img src="../microbot/logo.png" class="c-footer--logo" loading="lazy" alt="footer">
+                <div class="c-content-divider mt-3 mb-3"></div>
+                <ul class="d-flex align-items-center justify-content-center gap-4 m-auto text-center">
+                    <li>
+                        <a href="https://discord.gg/zaGrfqFEWE" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" viewBox="0 0 71 55"><title>logo
+                                discord</title>
+                                <g fill="none" class="nc-icon-wrapper">
+                                    <g clip-path="url(#clip0)">
+                                        <path d="M60.105 4.898A58.55 58.55 0 0 0 45.653.415a.22.22 0 0 0-.233.11 40.784 40.784 0 0 0-1.8 3.697c-5.456-.817-10.886-.817-16.23 0-.485-1.164-1.201-2.587-1.828-3.697a.228.228 0 0 0-.233-.11 58.386 58.386 0 0 0-14.451 4.483.207.207 0 0 0-.095.082C1.578 18.73-.944 32.144.293 45.39a.244.244 0 0 0 .093.167c6.073 4.46 11.955 7.167 17.729 8.962a.23.23 0 0 0 .249-.082 42.08 42.08 0 0 0 3.627-5.9.225.225 0 0 0-.123-.312 38.772 38.772 0 0 1-5.539-2.64.228.228 0 0 1-.022-.378c.372-.279.744-.569 1.1-.862a.22.22 0 0 1 .23-.03c11.619 5.304 24.198 5.304 35.68 0a.219.219 0 0 1 .233.027c.356.293.728.586 1.103.865a.228.228 0 0 1-.02.378 36.384 36.384 0 0 1-5.54 2.637.227.227 0 0 0-.121.315 47.249 47.249 0 0 0 3.624 5.897.225.225 0 0 0 .249.084c5.801-1.794 11.684-4.502 17.757-8.961a.228.228 0 0 0 .092-.164c1.48-15.315-2.48-28.618-10.497-40.412a.18.18 0 0 0-.093-.084zm-36.38 32.427c-3.497 0-6.38-3.211-6.38-7.156 0-3.944 2.827-7.156 6.38-7.156 3.583 0 6.438 3.24 6.382 7.156 0 3.945-2.827 7.156-6.381 7.156zm23.593 0c-3.498 0-6.38-3.211-6.38-7.156 0-3.944 2.826-7.156 6.38-7.156 3.582 0 6.437 3.24 6.38 7.156 0 3.945-2.798 7.156-6.38 7.156z"
+                                              fill="currentColor"></path>
+                                    </g>
+                                    <defs>
+                                        <clippath id="clip0">
+                                            <path fill="currentColor" d="M0 0h71v55H0z"></path>
+                                        </clippath>
+                                    </defs>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/chsami/microbot/releases" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" viewBox="0 0 16 16"><title>data
+                                download</title>
+                                <g fill="currentColor" class="nc-icon-wrapper">
+                                    <path d="M14,10a1,1,0,0,0-1,1v2H3V11a1,1,0,0,0-2,0v2a2,2,0,0,0,2,2H13a2,2,0,0,0,2-2V11A1,1,0,0,0,14,10Z"></path>
+                                    <path data-color="color-2"
+                                          d="M7.293,10.707a1,1,0,0,0,1.414,0l4-4a1,1,0,1,0-1.414-1.414L9,7.586V2A1,1,0,0,0,7,2V7.586L4.707,5.293A1,1,0,0,0,3.293,6.707Z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="c-footer-cc py-2 mt-5">
+        <div class="container">
+            <p class="text-center c-text-faded mb-0">Microbot © 2026. All Rights Reserved. - <a href="../privacy.html"
+                                                                                                target="_blank">Privacy
+                Policy</a> -
+                <a href="../terms.html"
+                   target="_blank">Terms of service</a></p>
+        </div>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('.rn-article img, .rn-article video').forEach(function (m) {
+        function hide() {
+            var box = m.closest('.rn-gallery') && m.closest('.rn-gallery').children.length > 1 ? m : (m.closest('figure') || m);
+            box.style.display = 'none';
+        }
+        if (m.tagName === 'IMG' && m.complete && m.naturalWidth === 0 && m.getAttribute('src')) hide();
+        m.addEventListener('error', hide);
+    });
+</script>
+</body>
+</html>

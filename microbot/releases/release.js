@@ -1,5 +1,53 @@
 const releases = [
     {
+        date: new Date('11/20/2026'), //MM/dd/YYYY
+        version: '2.6.60',
+        icon: 'images/releases/2.6.60/walker.png',
+        title: '2.6.60 Release - Quest Helper says yes to quests, the walker stops standing still, and clicks stay off the interface',
+        content: "Quest Helper presses Yes on \"Start the ... quest?\" and picks up quest items from the floor, the walker no longer stalls after the Musa Point ship, stops clicking Keldagrim carts without a ticket and uses worn Morytania legs, clicks on targets behind the inventory, chat box or minimap stay off the interface, Break Handler V2 ends a break when you turn it off, and Hub fixes to 34 plugins including Vorkath, Tithe Farm, Auto Mining, NMZ, Barrows, AIO Fighter and Dro's Firecape and AIO Slayer.",
+        author: 'Microbot Team'
+    },
+    {
+        date: new Date('11/18/2026'), //MM/dd/YYYY
+        version: '2.6.59',
+        icon: 'images/releases/2.6.59/login.png',
+        title: "2.6.59 Release - Up to date with RuneLite 1.13.7 and this week's game update",
+        content: "The client moves to RuneLite 1.13.7 so it matches the game after this week's update: new items, NPCs and quests are recognised, the world hopper, prices and hiscores support hardcore main worlds, Key Remapping no longer hijacks the display name box, and Spoof device ID keeps working on the new game revision.",
+        author: 'Microbot Team'
+    },
+    {
+        date: new Date('11/14/2026'), //MM/dd/YYYY
+        version: '2.6.58',
+        icon: 'images/releases/2.6.58/quest.png',
+        title: '2.6.58 Release - Quest Helper and walker fixes, and Dro AIO Slayer',
+        content: "Quest Helper stops closing option menus mid-conversation and waits out cutscenes, the walker pays charter ship fares, uses the fairy ring next to you and stops casting the same teleport twice, the antiban natural mouse checkbox is renamed to Aim Clicks From Cursor and keeps your choice, and Hub updates including two new Dro plugins (AIO Slayer and Efficient Walker), a big Scurrius update, Slayer, Barrows, Moons of Peril, AIO Fighter, CG Prep, Motherlode Mine and 10 others.",
+        author: 'Microbot Team'
+    },
+    {
+        date: new Date('11/12/2026'), //MM/dd/YYYY
+        version: '2.6.57',
+        icon: 'images/releases/2.6.57/mouse.png',
+        title: '2.6.57 Release - Fast mouse plugins stay fast, and four new Dro plugins',
+        content: "A fix that keeps a plugin's own mouse speed until you change your antiban settings, so Phosani's Nightmare and Barbarian Fishing click fast again, four new Dro plugins (Elf Thieving, Pyramid Plunder, Inferno Prayers and Colosseum Prayers), and Hub fixes to CG Prep, Tormented Demons, AIO Fighter, Herb Run, Blackjack, Motherlode Mine, Guardians of the Rift and 15 others.",
+        author: 'Microbot Team'
+    },
+    {
+        date: new Date('11/09/2026'), //MM/dd/YYYY
+        version: '2.6.55',
+        icon: 'images/releases/2.6.55/microbot-hub.png',
+        title: '2.6.55 Release - A new installed plugins list and five new plugins',
+        content: "A rebuilt installed plugins list with sorting, an Only on filter and Hub installs from the search box, a sort menu and plain-worded states in the Hub tab, a banner when an installed plugin's Hub status changes, opt-in hardware ID spoofing, walker, camera and natural mouse fixes, and Hub updates including five new Fourtifys plugins (Phosani's Nightmare, Tormented Demons, Barrows, Agility and Gem Mining), Auto Fishing, Tithe Farm, Revenant Killer, Guardians of the Rift and Tempoross.",
+        author: 'Microbot Team'
+    },
+    {
+        date: new Date('11/05/2026'), //MM/dd/YYYY
+        version: '2.6.53',
+        icon: 'images/releases/2.6.53/pause.png',
+        title: '2.6.53 Release - Pause every script with one click',
+        content: "A pause button that pauses every running script and gives you the mouse and keyboard, a Local Plugins window to add, update and remove plugin JARs without a restart, Quest Helper fixes for Semi-Auto and Cold War, bank trips that pick a bank you can walk to, login fixes, and Hub updates including the new Sulliuscep plugin, Auto Gauntlet, Barbarian Fisher, Thieving, Arceuus Library, Tempoross and Barrows.",
+        author: 'Microbot Team'
+    },
+    {
         date: new Date('11/03/2026'), //MM/dd/YYYY
         version: '2.6.51',
         icon: 'images/releases/2.6.51/skull.png',
