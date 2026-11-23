@@ -34,6 +34,36 @@
 
   <!-- Release Notes -->
   <url>
+    <loc>https://www.themicrobot.com/releases/2.6.60.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.themicrobot.com/releases/2.6.59.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.themicrobot.com/releases/2.6.58.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.themicrobot.com/releases/2.6.57.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.themicrobot.com/releases/2.6.55.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.themicrobot.com/releases/2.6.53.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.themicrobot.com/releases/2.6.51.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
